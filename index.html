@@ -1,0 +1,3729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacific Gateway Careers | Finance Career Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #0a0f2e;
+      --accent: #c8a96e;
+      --accent-light: #e8d5a8;
+      --accent-dark: #a8893e;
+      --red: #d4163c;
+      --red-light: #ff4d6d;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gray-100: #f4f3f0;
+      --gray-200: #e8e6e1;
+      --gray-400: #9b9690;
+      --gray-600: #6b6560;
+      --gray-800: #2d2b28;
+      --text: #1a1814;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 48px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10, 15, 46, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--primary);
+      letter-spacing: -1px;
+    }
+
+    .logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.3px;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .logo-cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      color: rgba(200,169,110,0.6);
+      letter-spacing: 1.5px;
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: var(--primary) !important;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    .lang-badge {
+      background: rgba(200, 169, 110, 0.12);
+      border: 1px solid rgba(200, 169, 110, 0.3);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 70% 40%, #0f1a45 0%, #070b24 60%, #0a0f2e 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,169,110,0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,169,110,0.055) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 100%);
+    }
+
+    /* Animated orbs */
+    .hero-glow {
+      position: absolute;
+      width: 1000px; height: 1000px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,22,60,0.18) 0%, transparent 60%);
+      top: -280px; right: -280px;
+      pointer-events: none;
+      animation: orbDrift1 14s ease-in-out infinite alternate;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      width: 750px; height: 750px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,169,110,0.14) 0%, transparent 60%);
+      bottom: -180px; left: -180px;
+      pointer-events: none;
+      animation: orbDrift2 18s ease-in-out infinite alternate;
+    }
+    .hero-glow-3 {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.07) 0%, transparent 65%);
+      top: 35%; left: 30%;
+      pointer-events: none;
+      animation: orbDrift3 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbDrift1 {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(-60px, 80px) scale(1.1); }
+    }
+    @keyframes orbDrift2 {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(80px, -60px) scale(1.15); }
+    }
+    @keyframes orbDrift3 {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(-40px, 60px) scale(0.9); }
+    }
+
+    /* Synapse network */
+    .hero-synapse {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .syn-line {
+      stroke: #c8a96e;
+      stroke-width: 0.8;
+      opacity: 0;
+      animation: synPulse linear infinite;
+    }
+
+    .syn-node {
+      fill: none;
+      stroke: #c8a96e;
+      animation: synPulse linear infinite;
+      opacity: 0;
+    }
+
+    .syn-node-fill {
+      fill: #c8a96e;
+      animation: synGlow ease-in-out infinite alternate;
+    }
+
+    @keyframes synPulse {
+      0%   { opacity: 0; }
+      15%  { opacity: 0.6; }
+      85%  { opacity: 0.6; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes synGlow {
+      from { opacity: 0.3; r: 2; }
+      to   { opacity: 0.9; r: 3.5; }
+    }
+
+    /* Floating firm badges */
+    .hero-floats {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .float-badge {
+      position: absolute;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.22);
+      padding: 5px 13px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      animation: floatDrift linear infinite;
+    }
+
+    @keyframes floatDrift {
+      0%   { transform: translateY(0) translateX(0);    opacity: 0; }
+      8%   { opacity: 1; }
+      88%  { opacity: 0.5; }
+      100% { transform: translateY(-160px) translateX(var(--drift)); opacity: 0; }
+    }
+
+    /* Gradient headline */
+    .hero h1 .gold {
+      background: linear-gradient(90deg, #e8d5a8, #c8a96e, #a8893e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Stat card shimmer */
+    .stat-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+      transform: skewX(-20deg);
+      animation: shimmer 6s ease-in-out infinite;
+    }
+    .stat-card:nth-child(2)::after { animation-delay: 1.5s; }
+    .stat-card:nth-child(3)::after { animation-delay: 3s; }
+    .stat-card:nth-child(4)::after { animation-delay: 4.5s; }
+
+    @keyframes shimmer {
+      0%   { left: -75%; }
+      50%  { left: 125%; }
+      100% { left: 125%; }
+    }
+
+    /* Decorative divider line on hero left */
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .hero-divider-line {
+      height: 1.5px;
+      width: 56px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .hero-divider-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.7;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 22, 60, 0.1);
+      border: 1px solid rgba(212, 22, 60, 0.25);
+      color: #ff6b85;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ff6b85;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.06;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.4);
+    }
+
+    /* Gradient gold on Finance */
+    .hero h1 .gold {
+      background: linear-gradient(100deg, #f0d98a 0%, #c8a96e 50%, #a8893e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Glowing red on Here. */
+    .hero h1 .red {
+      color: var(--red-light);
+      text-shadow: 0 0 40px rgba(255,77,109,0.55), 0 0 80px rgba(255,77,109,0.2);
+    }
+
+    .hero-subtitle-cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 22px;
+      letter-spacing: 3px;
+    }
+
+    .hero-desc {
+      font-size: 16.5px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 40px;
+      max-width: 520px;
+    }
+
+    .hero-desc strong { color: var(--accent-light); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Pulsing ring on primary CTA */
+    .btn-primary {
+      background: linear-gradient(135deg, #e8153a 0%, #ff3d62 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 28px rgba(212,22,60,0.45);
+      position: relative;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 11px;
+      border: 1.5px solid rgba(212,22,60,0.4);
+      animation: ringPulse 2.5s ease-out infinite;
+    }
+
+    @keyframes ringPulse {
+      0%   { opacity: 0.8; transform: scale(1); }
+      100% { opacity: 0;   transform: scale(1.12); }
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(212,22,60,0.55);
+    }
+
+    .btn-secondary {
+      background: rgba(200,169,110,0.08);
+      border: 1.5px solid rgba(200,169,110,0.45);
+      color: var(--accent);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(200,169,110,0.16);
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px rgba(200,169,110,0.15);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+      padding: 28px 24px;
+      transition: border-color 0.3s, transform 0.3s;
+      border-top: 3px solid var(--accent);
+    }
+
+    .stat-card:hover {
+      border-color: rgba(200,169,110,0.4);
+      border-top-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .stat-card.highlight {
+      border-color: rgba(200,169,110,0.3);
+      border-top: 3px solid var(--accent);
+      background: rgba(200,169,110,0.07);
+      box-shadow: 0 8px 32px rgba(200,169,110,0.08);
+    }
+
+    .stat-number {
+      font-size: 46px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .stat-number .unit {
+      font-size: 24px;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 10px;
+      line-height: 1.55;
+    }
+
+    .stat-label-cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.22);
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    /* ── FIRM LOGOS ── */
+    .firms-section {
+      background: var(--gray-100);
+      padding: 96px 48px;
+      border-bottom: 1px solid var(--gray-200);
+      text-align: center;
+    }
+
+    .firms-section .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 36px;
+    }
+
+    .firms-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px 48px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .firm-logo-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s;
+    }
+
+    .firm-logo-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .firm-logo-card img {
+      height: 80px;
+      width: auto;
+      max-width: 240px;
+      object-fit: contain;
+      transition: opacity 0.25s;
+    }
+
+    .firm-logo-card.multiply img {
+      mix-blend-mode: multiply;
+    }
+
+    .firm-logo-card:hover img {
+      opacity: 0.8;
+    }
+
+    /* ── SECTION COMMON ── */
+    .section {
+      padding: 96px 48px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -1px;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-title .accent { color: var(--red); }
+
+    .section-subtitle {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--gray-600);
+      max-width: 600px;
+    }
+
+    @keyframes gilt-flow {
+      0%   { background-position: auto, 0% 50%; }
+      100% { background-position: auto, 200% 50%; }
+    }
+
+    /* ── WHY US ── */
+    .why-section {
+      background: var(--primary);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-section > .section-inner { position: relative; z-index: 2; }
+    .why-ribbon {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .why-section .section-eyebrow { color: var(--accent); }
+    .why-section .section-title { color: white; }
+    .why-section .section-subtitle {
+      color: rgba(255,255,255,0.95);
+      text-shadow: 0 1px 12px rgba(10,15,46,0.9), 0 2px 24px rgba(10,15,46,0.7);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: 1fr;
+      gap: 16px;
+      margin-top: 56px;
+    }
+
+    .why-card {
+      background:
+        linear-gradient(#eaecf0, #eaecf0) padding-box,
+        linear-gradient(90deg, #6b4410, #c8a96e, #f5e898, #fff8e0, #f5e898, #c8a96e, #6b4410, #c8a96e, #f5e898, #fff8e0, #c8a96e, #6b4410) border-box;
+      background-size: auto, 300% auto;
+      animation: gilt-flow 5s linear infinite;
+      border: 3px solid transparent;
+      border-radius: 16px;
+      padding: 28px 36px 28px 56px;
+      transition: box-shadow 0.35s, transform 0.35s;
+      box-shadow: inset 3px 0 0 0 #6b4410;
+      position: relative;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      box-shadow: 0 3px 16px rgba(10,15,46,0.07);
+    }
+
+    /* Inner inset border — Victorian double-frame effect */
+    .why-card::before {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(200,169,110,0.4);
+      border-radius: 11px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Corner ornaments — TL and BR L-brackets */
+    .why-card .why-corner {
+      position: absolute;
+      width: 14px; height: 14px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .why-card .why-corner-tl { top: 10px;  left: 12px;  border-top: 2px solid rgba(200,169,110,0.8); border-left: 2px solid rgba(200,169,110,0.8); border-radius: 3px 0 0 0; }
+    .why-card .why-corner-tr { top: 10px;  right: 8px; border-top: 2px solid rgba(200,169,110,0.8); border-right: 2px solid rgba(200,169,110,0.8); border-radius: 0 3px 0 0; }
+    .why-card .why-corner-bl { bottom: 10px; left: 12px;  border-bottom: 2px solid rgba(200,169,110,0.8); border-left: 2px solid rgba(200,169,110,0.8); border-radius: 0 0 0 3px; }
+    .why-card .why-corner-br { bottom: 10px; right: 8px; border-bottom: 2px solid rgba(200,169,110,0.8); border-right: 2px solid rgba(200,169,110,0.8); border-radius: 0 0 3px 0; }
+
+    .why-card:hover {
+      box-shadow: 0 12px 40px rgba(200,169,110,0.25), inset 3px 0 0 0 #6b4410;
+      transform: translateX(6px);
+    }
+
+    .why-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 60%, rgba(200,169,110,0.05));
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    .why-card:hover::after { opacity: 1; }
+
+    .why-icon {
+      width: 73px;
+      height: 73px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(10,15,46,0.06), rgba(10,15,46,0.02));
+      border: 1px solid rgba(10,15,46,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      flex-shrink: 0;
+    }
+
+    .why-card-text { flex: 1; }
+
+    .why-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .why-card .cn-label {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      color: var(--accent-dark);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .why-card p {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* Binder rings */
+    .why-rings {
+      position: absolute;
+      left: -10px;
+      top: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      pointer-events: none;
+      z-index: 4;
+    }
+    .why-ring {
+      width: 16px;
+      height: 24px;
+      border-radius: 50%;
+      border: 4px solid #c8a96e;
+      background: transparent;
+      box-shadow:
+        0 2px 5px rgba(0,0,0,0.5),
+        inset 0 1px 2px rgba(255,248,200,0.3);
+      transform: rotate(100deg);
+    }
+
+    /* Spine overlay slots — cover ring's top border-crossing to create threading effect */
+    .why-spine-slot {
+      position: absolute;
+      left: -5px;
+      width: 7px;
+      height: 3px;
+      background: #6b4410;
+      z-index: 6;
+      pointer-events: none;
+      transform: rotate(90deg);
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      background: linear-gradient(160deg, #f4f6fb 0%, #fdfcf8 60%, #faf8f2 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #services > .section-inner { position: relative; z-index: 1; }
+    .svc-wave {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 14.4%;
+      min-width: 96px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+    #svc-wave-left  { left: 0; }
+    #svc-wave-right { right: 0; }
+
+    #services .section-subtitle strong {
+      color: var(--primary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 36px 32px;
+      transition: all 0.35s cubic-bezier(0.22,0.61,0.36,1);
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid var(--primary);
+      box-shadow: 0 2px 16px rgba(10,15,46,0.05);
+    }
+
+    /* Gold corner bracket — top right */
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 14px; right: 14px;
+      width: 18px; height: 18px;
+      border-top: 2px solid rgba(200,169,110,0.45);
+      border-right: 2px solid rgba(200,169,110,0.45);
+      border-radius: 0 6px 0 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Bottom-left matching bracket */
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 14px; left: 14px;
+      width: 18px; height: 18px;
+      border-bottom: 2px solid rgba(200,169,110,0.45);
+      border-left: 2px solid rgba(200,169,110,0.45);
+      border-radius: 0 0 0 6px;
+      transition: all 0.35s;
+    }
+
+    .service-card:hover::before {
+      border-color: rgba(200,169,110,0.85);
+    }
+
+    .service-card:hover::after {
+      border-color: rgba(200,169,110,0.85);
+    }
+
+    /* Shimmer sweep on hover */
+    .service-card .shimmer {
+      position: absolute;
+      top: 0; left: -75%;
+      width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(200,169,110,0.10) 50%, transparent 100%);
+      transform: skewX(-15deg);
+      transition: left 0.55s ease;
+      pointer-events: none;
+    }
+
+    .service-card:hover .shimmer {
+      left: 150%;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      border-top-color: var(--accent);
+      box-shadow: 0 16px 48px rgba(200,169,110,0.18);
+      transform: translateY(-5px);
+      background: linear-gradient(160deg, #fff 70%, rgba(200,169,110,0.04) 100%);
+    }
+
+    .service-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--accent-dark);
+      background: linear-gradient(135deg, rgba(200,169,110,0.15), rgba(200,169,110,0.06));
+      border: 1px solid rgba(200,169,110,0.35);
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+      line-height: 1.3;
+    }
+
+    .service-card .cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12.5px;
+      color: var(--gray-400);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-card .cn::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background: rgba(200,169,110,0.5);
+      flex-shrink: 0;
+    }
+
+    .service-card p {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+    }
+
+    .service-features {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .service-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    .service-feature::before {
+      content: '✓';
+      color: var(--accent-dark);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-progress {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gray-200);
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+    }
+
+    .step-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+      border-radius: 0 0 20px 20px;
+      width: 0;
+      transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .service-card:hover .step-progress-fill {
+      width: var(--fill);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--red), #ff2d5a);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── MARKETS ── */
+    .markets-section {
+      background: var(--white);
+      padding-bottom: 96px;
+      overflow: hidden;
+      position: relative;
+    }
+    .markets-section > .section-inner { position: relative; z-index: 1; }
+    .markets-worldmap {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      object-fit: cover;
+      object-position: 72% center;
+      transform: scale(1.341) translateY(40px) translateX(-40px);
+      transform-origin: center center;
+      filter: contrast(1.3) brightness(0.95);
+    }
+    .markets-section {
+    }
+
+    .markets-editorial {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 64px;
+      position: relative;
+    }
+
+    .market-divider {
+      position: absolute;
+      left: calc(50% - 4px);
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: linear-gradient(180deg, transparent 20%, var(--accent) 20%, var(--accent) 80%, transparent 80%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .market-editorial {
+      padding: 64px 72px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .market-editorial.au {
+      background: linear-gradient(145deg, #fdf5e4 0%, #f5e8c8 100%);
+    }
+
+    .market-editorial.us {
+      background: var(--primary);
+    }
+
+    /* Ghost watermarks */
+    .market-editorial::after {
+      position: absolute;
+      bottom: -16px;
+      right: 24px;
+      font-size: 200px;
+      font-weight: 900;
+      letter-spacing: -8px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .market-editorial.au::after {
+      content: 'AU';
+      color: rgba(10,15,46,0.07);
+    }
+    .market-editorial.us::after {
+      content: 'US';
+      color: rgba(255,255,255,0.06);
+    }
+
+    .market-editorial-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .market-editorial-flag {
+      font-size: 40px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .market-editorial-country {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .market-editorial.au .market-editorial-country { color: var(--primary); }
+    .market-editorial.us .market-editorial-country { color: var(--accent); }
+
+    .market-editorial-cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .market-editorial.au .market-editorial-cn { color: var(--gray-400); }
+    .market-editorial.us .market-editorial-cn { color: rgba(255,255,255,0.35); }
+
+    .market-editorial-cn::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .market-editorial p {
+      font-size: 14px;
+      line-height: 1.85;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .market-editorial.au p { color: var(--gray-600); }
+    .market-editorial.us p { color: rgba(255,255,255,0.62); }
+    .market-editorial p:last-child { margin-bottom: 0; }
+
+    /* ── CONSULTANTS ── */
+    .consultants-section {
+      background: linear-gradient(to top right, var(--primary) 56%, #5a000e 100%);
+    }
+
+    .consultants-section .section-title { color: white; }
+    .consultants-section .section-eyebrow { color: var(--accent); }
+    .consultants-section .section-subtitle { color: rgba(255,255,255,0.55); }
+
+    .consultants-intro {
+      background: rgba(200, 169, 110, 0.08);
+      border: 1px solid rgba(200, 169, 110, 0.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-top: 48px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .consultants-intro-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .consultants-intro p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .consultants-intro strong { color: var(--accent); }
+
+    /* Success flair banner */
+    .success-flair {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin: 40px 0 48px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(200,169,110,0.15);
+      border-bottom: 1px solid rgba(200,169,110,0.15);
+    }
+
+    .flair-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flair-icon {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .flair-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(200,169,110,0.7);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .profile-card {
+      background: #253068;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-top: 3px solid var(--accent);
+      border-radius: 20px;
+      padding: 32px 28px;
+      transition: all 0.3s;
+    }
+
+    .profile-card:hover {
+      border-color: rgba(200,169,110,0.35);
+      border-top-color: var(--accent);
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .profile-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(200,169,110,0.2), rgba(200,169,110,0.05));
+      border: 2px solid rgba(200,169,110,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .profile-header-text { flex: 1; }
+
+    .profile-role {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .profile-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .profile-market {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+      padding-left: 2px;
+    }
+
+    /* Achievement timeline */
+    .profile-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .profile-timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(180deg, var(--accent), rgba(200,169,110,0.2));
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .timeline-dot {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid rgba(200,169,110,0.4);
+      flex-shrink: 0;
+      margin-top: 3px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-item:last-child .timeline-dot {
+      background: var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 8px rgba(200,169,110,0.5);
+    }
+
+    .timeline-text {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .timeline-item:last-child .timeline-text {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .profile-cn-name {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 16px;
+    }
+
+    /* ── PROCESS ── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 64px;
+      position: relative;
+    }
+
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(10% + 16px);
+      right: calc(10% + 16px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--red-light), var(--accent));
+      z-index: 0;
+    }
+
+    .process-step {
+      padding: 0 12px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 0 auto 24px;
+      position: relative;
+      box-shadow: 0 0 0 8px var(--white);
+    }
+
+    /* Step 4 — red fireworks celebration */
+    @keyframes fireworks-pulse {
+      0%, 100% { box-shadow: 0 0 0 8px var(--white), 0 0 16px rgba(212,22,60,0.5), 0 0 32px rgba(212,22,60,0.2); }
+      50%       { box-shadow: 0 0 0 8px var(--white), 0 0 28px rgba(212,22,60,0.8), 0 0 56px rgba(212,22,60,0.35); }
+    }
+
+    .process-step.step-goal .step-circle {
+      background: linear-gradient(135deg, #ff2d5a, #d4163c);
+      animation: fireworks-pulse 1.8s ease-in-out infinite;
+    }
+
+    .process-step.step-goal h4 { color: var(--red); }
+
+    /* Step 5 — optional muted */
+    .process-step.step-optional .step-circle {
+      background: linear-gradient(135deg, var(--gray-400), var(--gray-600));
+      box-shadow: 0 0 0 8px var(--white);
+    }
+
+    .process-step.step-optional h4 { color: var(--gray-500); }
+
+    .step-optional-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      border: 1px solid var(--gray-300);
+      border-radius: 10px;
+      padding: 2px 7px;
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    .process-step h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .process-step .cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--gray-600);
+    }
+
+    /* Success imagery strip */
+    .process-imagery {
+      display: flex;
+      gap: 16px;
+      margin-top: 56px;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .process-imagery-item {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .process-imagery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,15,46,0.55));
+      border-radius: 12px;
+    }
+
+    .process-imagery-label {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      z-index: 1;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--off-white);
+    }
+
+    .testimonials-carousel {
+      position: relative;
+      overflow: hidden;
+      margin-top: 56px;
+      padding-bottom: 80px;
+    }
+
+    .testimonials-track {
+      position: relative;
+      min-height: 400px;
+    }
+
+    .testimonial-card {
+      position: absolute;
+      width: 52%;
+      left: 50%;
+      top: 0;
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 20px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .testimonial-card[data-pos="active"] {
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+      filter: none;
+      z-index: 3;
+      pointer-events: auto;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.10);
+      border-color: var(--accent);
+    }
+
+    .testimonial-card[data-pos="prev"] {
+      transform: translateX(calc(-50% - 57%)) scale(0.86);
+      opacity: 0.5;
+      filter: blur(3px);
+      z-index: 2;
+    }
+
+    .testimonial-card[data-pos="next"] {
+      transform: translateX(calc(-50% + 57%)) scale(0.86);
+      opacity: 0.5;
+      filter: blur(3px);
+      z-index: 2;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .carousel-btn {
+      background: none;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    .carousel-btn:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gray-300);
+      transition: background 0.3s;
+    }
+
+    .carousel-dot.active {
+      background: var(--accent);
+      width: 22px;
+      border-radius: 4px;
+    }
+
+    .testimonial-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .stars {
+      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .review-date {
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+
+    .quote-mark {
+      font-size: 48px;
+      line-height: 1;
+      color: var(--accent);
+      font-family: Georgia, serif;
+      margin-bottom: -8px;
+    }
+
+    .testimonial-text {
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+      font-style: italic;
+      flex: 1;
+    }
+
+    .testimonial-author {
+      margin-top: auto;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #1a2550);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .author-info {}
+
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .author-detail {
+      font-size: 12px;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+
+    .outcome-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, rgba(212, 22, 60, 0.08), rgba(212, 22, 60, 0.04));
+      border: 1px solid rgba(212, 22, 60, 0.2);
+      color: var(--red);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, #0f1a40 50%, #1a0a1e 100%);
+      padding: 100px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(200,169,110,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,169,110,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+    }
+
+    .cta-section h2 span { color: var(--accent); }
+
+    .cta-section .cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 18px;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 44px;
+    }
+
+    .cta-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .cta-buttons .btn-large {
+      min-width: unset;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-large {
+      padding: 18px 40px;
+      min-width: 240px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-red {
+      background: linear-gradient(135deg, var(--red), #ff2d5a);
+      color: white;
+      box-shadow: 0 6px 28px rgba(212, 22, 60, 0.4);
+    }
+
+    .btn-red:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(212, 22, 60, 0.5);
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(200, 169, 110, 0.5);
+      color: var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: rgba(200, 169, 110, 0.1);
+      border-color: var(--accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #050810;
+      padding: 60px 48px 32px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-brand {}
+
+    .footer-brand .logo-text {
+      font-size: 18px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-brand .cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 13px;
+      margin-top: 6px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 1.5px;
+    }
+
+    .footer-col h5 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 13.5px;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12.5px;
+    }
+
+    .footer-bottom .locations {
+      display: flex;
+      gap: 20px;
+    }
+
+    .location-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ── SOCIAL PROOF BAR ── */
+    .social-proof {
+      background: linear-gradient(90deg, var(--accent-dark), var(--accent), var(--accent-dark));
+      padding: 14px 48px;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .proof-item::before {
+      content: '★';
+      font-size: 14px;
+    }
+
+    /* ── MOBILE ── */
+    /* ── CITY RIBBON ── */
+    .city-ribbon {
+      background: var(--primary);
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid rgba(200, 169, 110, 0.1);
+      border-bottom: 1px solid rgba(200, 169, 110, 0.1);
+    }
+
+    .city-ribbon-label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: linear-gradient(90deg, var(--primary) 60%, transparent);
+      padding: 0 40px 0 32px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .city-ribbon-label span {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(200, 169, 110, 0.6);
+      white-space: nowrap;
+    }
+
+    .city-ribbon-fade-right {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 120px;
+      background: linear-gradient(270deg, var(--primary) 30%, transparent);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .city-ribbon-track {
+      display: flex;
+      gap: 12px;
+      padding: 14px 0 14px 220px;
+      animation: ribbonScroll 40s linear infinite;
+      width: max-content;
+    }
+
+    .city-ribbon-track:hover { animation-play-state: paused; }
+
+    @keyframes ribbonScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .city-tile {
+      position: relative;
+      width: 260px;
+      height: 160px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: default;
+    }
+
+    .city-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: brightness(0.75) saturate(0.9);
+    }
+
+    .city-tile:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.9) saturate(1.1);
+    }
+
+    .city-tile-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,15,46,0.85) 0%, transparent 55%);
+    }
+
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hero-content { grid-template-columns: 1fr; gap: 48px; padding: 48px 24px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .markets-grid { grid-template-columns: 1fr; }
+      .profile-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .process-grid::before { display: none; }
+      .testimonial-card { width: 80%; }
+      .testimonial-card[data-pos="prev"] { transform: translateX(calc(-50% - 90%)) scale(0.86); }
+      .testimonial-card[data-pos="next"] { transform: translateX(calc(-50% + 90%)) scale(0.86); }
+      .section { padding: 72px 24px; }
+      .firms-section { padding: 40px 24px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .social-proof { gap: 24px; padding: 14px 24px; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-left > * {
+      animation: fadeInUp 0.7s ease both;
+    }
+
+    .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+    .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+    .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+    .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
+    .hero-left > *:nth-child(5) { animation-delay: 0.5s; }
+
+    .hero-right {
+      animation: fadeInUp 0.9s ease 0.3s both;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">PG</div>
+    <div class="logo-text">Pacific Gateway <span>Careers</span><div class="logo-cn">太平洋职桥</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#our-story">Our Story</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Success Stories</a></li>
+    <li><span class="lang-badge">中 / EN</span></li>
+    <li><a href="consultation.html" class="nav-cta">Book Free Consult</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-glow-3"></div>
+  <div class="hero-floats" id="heroFloats"></div>
+
+  <!-- SYNAPSE NETWORK -->
+  <div class="hero-synapse" id="synapseContainer"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Australia &amp; US Finance Careers</div>
+      <h1>
+        Your <span class="gold">Finance</span> Career<br />
+        Starts <span class="red">Here.</span>
+      </h1>
+      <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-dot"></div>
+        <div class="hero-divider-dot"></div>
+        <div class="hero-divider-dot"></div>
+      </div>
+      <p class="hero-subtitle-cn">顶级金融求职顾问 · 双语服务</p>
+      <p class="hero-desc">
+        Pacific Gateway Careers is a boutique career consultancy for <strong>Chinese international students and graduates</strong> targeting top finance roles in Australia and the United States. Our consultants have walked the exact same path — and landed the offers. Now, we help our students do the same.
+      </p>
+      <div class="hero-actions">
+        <a href="consultation.html" class="btn-primary">Book a Free Consultation</a>
+        <a href="#services" class="btn-secondary">View Services →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="stat-card highlight">
+          <div class="stat-number">30<span class="unit">+</span></div>
+          <div class="stat-label">Top-tier firms our consultants have been recruited into</div>
+          <div class="stat-label-cn">顾问就职的顶级金融机构</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="font-size:36px;letter-spacing:-1px;">AU <span style="color:var(--accent)">+</span> US</div>
+          <div class="stat-label">Specialist expertise across both Australia &amp; the United States</div>
+          <div class="stat-label-cn">深耕澳洲与美国市场</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100<span class="unit">%</span></div>
+          <div class="stat-label">Bilingual consultants — Mandarin &amp; English</div>
+          <div class="stat-label-cn">全体顾问中英双语</div>
+        </div>
+        <div class="stat-card highlight">
+          <div class="stat-number">88<span class="unit">%</span></div>
+          <div class="stat-label">Placement rate across all candidates we have worked with</div>
+          <div class="stat-label-cn">候选人成功录用率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<div class="social-proof">
+  <div class="proof-item">Consultants from highly competitive roles at top global finance institutions</div>
+  <div class="proof-item">Students achieved outstanding internship and graduate offers at dream companies</div>
+  <div class="proof-item">Bilingual: 中文 &amp; English support</div>
+  <div class="proof-item">Australia 🇦🇺 &amp; USA 🇺🇸</div>
+</div>
+
+<!-- CITY RIBBON -->
+<div class="city-ribbon">
+  <div class="city-ribbon-label"><span>Our Markets</span></div>
+  <div class="city-ribbon-fade-right"></div>
+  <div class="city-ribbon-track">
+    <!-- Set 1 -->
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=520&h=320&fit=crop&q=80" alt="Sydney" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1514395462725-fb4566210144?w=520&h=320&fit=crop&q=80" alt="Melbourne" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1566734904496-9309bb1798ae?w=520&h=320&fit=crop&q=80" alt="Brisbane" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1522083165195-3424ed129620?w=520&h=320&fit=crop&q=80" alt="New York" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=520&h=320&fit=crop&q=80" alt="Chicago" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=520&h=320&fit=crop&q=80" alt="San Francisco" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=520&h=320&fit=crop&q=80" alt="Seattle" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=520&h=320&fit=crop&q=80" alt="Shanghai" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=520&h=320&fit=crop&q=80" alt="Beijing" /></div>
+    <!-- Set 2 — duplicate for seamless loop -->
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=520&h=320&fit=crop&q=80" alt="Sydney" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1514395462725-fb4566210144?w=520&h=320&fit=crop&q=80" alt="Melbourne" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1566734904496-9309bb1798ae?w=520&h=320&fit=crop&q=80" alt="Brisbane" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1522083165195-3424ed129620?w=520&h=320&fit=crop&q=80" alt="New York" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=520&h=320&fit=crop&q=80" alt="Chicago" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=520&h=320&fit=crop&q=80" alt="San Francisco" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=520&h=320&fit=crop&q=80" alt="Seattle" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=520&h=320&fit=crop&q=80" alt="Shanghai" /></div>
+    <div class="city-tile"><img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=520&h=320&fit=crop&q=80" alt="Beijing" /></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHO WE ARE — START
+     To remove: delete everything between the START and END comments
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="our-story-section" id="our-story">
+  <div class="our-story-bg-char">我们</div>
+  <div class="our-story-bg-char-left">关于</div>
+  <div class="our-story-inner">
+    <div class="section-eyebrow" style="color:var(--accent);text-align:center;">Our Story</div>
+    <p class="our-story-pull">"We've been exactly where you are."</p>
+    <p class="our-story-body">Years ago, each of us went through finance recruitment in Australia and the United States as students — building from scratch, without a network, without a clear roadmap, learning through trial and error what it actually takes to compete for the most coveted roles in the industry. Through persistence, experimentation, and a lot of late nights, we built up a wealth of knowledge, resources, and strategies — and eventually landed offers at some of the most competitive firms in the world.</p>
+    <p class="our-story-body">Along the way, we watched classmates, peers, close friends — even family members — approach the same process without structure or direction. Talented people who deserved those roles, but never got the guidance to compete for them. That never sat right with us.</p>
+    <p class="our-story-body">Pacific Gateway Careers exists because no student should have to figure this out alone. We built the resource we wished we'd had.</p>
+  </div>
+</section>
+<style>
+  .our-story-section {
+    position: relative;
+    background: #faf7f0;
+    padding: 88px 48px;
+    overflow: hidden;
+    scroll-margin-top: 72px;
+  }
+  .our-story-bg-char {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(200,169,110,0.08);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -8px;
+  }
+  .our-story-bg-char-left {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(200,169,110,0.08);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -8px;
+  }
+  .our-story-inner {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  .our-story-pull {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.4;
+    margin: 18px 0 32px;
+    font-style: italic;
+  }
+  .our-story-body {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--primary);
+    opacity: 0.82;
+    margin-bottom: 20px;
+  }
+  .our-story-body:last-child { margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .our-story-section { padding: 64px 24px; }
+    .our-story-pull { font-size: 21px; }
+    .our-story-bg-char { font-size: 120px; right: 2%; }
+    .our-story-bg-char-left { font-size: 120px; left: 2%; }
+  }
+</style>
+<!-- ═══════════════════════════════════════════════════════════════
+     WHO WE ARE — END
+     ═══════════════════════════════════════════════════════════════ -->
+
+<!-- WHY US -->
+<section class="section why-section" id="about">
+
+  <!-- Flowing ribbon decoration — behind all content -->
+  <svg class="why-ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="rib-body" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#5a000e"/>
+        <stop offset="20%"  stop-color="#b80e28"/>
+        <stop offset="50%"  stop-color="#d4163c"/>
+        <stop offset="75%"  stop-color="#e03050"/>
+        <stop offset="100%" stop-color="#7a0018"/>
+      </linearGradient>
+      <linearGradient id="rib-hi2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#ff708a" stop-opacity="0"/>
+        <stop offset="35%"  stop-color="#ff90a0" stop-opacity="0.7"/>
+        <stop offset="65%"  stop-color="#ff708a" stop-opacity="0.45"/>
+        <stop offset="100%" stop-color="#ff708a" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <g transform="translate(100,0) scale(-1,1)">
+    <!-- Shadow underside — offset slightly, darker -->
+    <path fill="#2e0008" fill-opacity="0.1"
+      d="M -3,103
+         C 18,99 58,90 80,78 C 96,68 88,54 68,46
+         C 48,38  8,36 12,24 C 16,14 52,4 72,−3
+         L 82,-3
+         C 60,4 26,15 22,26 C 18,38 58,42 76,50
+         C 96,60 102,74 86,84 C 68,96 28,101 8,103 Z"/>
+
+    <!-- Main ribbon body — full width S-curves -->
+    <path fill="url(#rib-body)" fill-opacity="0.88"
+      d="M -5,103
+         C 16,99 56,90 78,78 C 94,68 86,54 66,46
+         C 46,38  6,36 10,24 C 14,14 50,4 70,-3
+         L 80,-3
+         C 58,4 24,15 20,26 C 16,38 56,42 74,50
+         C 94,60 100,74 84,84 C 66,96 26,101 6,103 Z"/>
+
+    <!-- Second ribbon layer — adds depth and a second wave -->
+    <path fill="#c01030" fill-opacity="0.45"
+      d="M 10,103
+         C 30,97 62,86 72,72 C 82,58 70,46 52,42
+         C 34,38 10,40 14,28 C 18,18 46,8 60,-3
+         L 68,-3
+         C 52,8 26,18 22,28 C 18,40 40,38 58,42
+         C 78,48 90,60 80,74 C 70,88 38,98 18,103 Z"/>
+
+    <!-- Highlight on convex surfaces (rightward peaks) -->
+    <path fill="url(#rib-hi2)" fill-opacity="0.6"
+      d="M 20,100 C 42,94 68,82 76,70 C 72,72 48,84 24,96 Z
+         M 16,28 C 22,18 44,8 62,-3 L 68,-3 C 48,8 26,18 20,28 Z"/>
+
+    <!-- Bright leading-edge highlight stroke -->
+    <path fill="none" stroke="#ff9090" stroke-width="0.5" stroke-opacity="0.4" stroke-linecap="round"
+      d="M -4,100 C 18,96 56,86 76,74 C 92,64 84,50 62,42
+         C 40,34 8,32 12,20 C 16,10 50,2 72,-3"/>
+
+    <!-- Dark crease lines at inflection/twist zones -->
+    <path fill="#1e0006" fill-opacity="0.5"
+      d="M 64,48 C 62,46 60,44 58,44 C 56,44 54,46 54,48
+         C 56,46 60,46 62,48 C 64,50 64,54 62,56 C 64,54 66,52 64,48 Z
+         M 12,26 C 10,24 10,22 12,20 C 12,22 10,24 12,26
+         C 14,28 18,30 18,32 C 18,30 14,28 12,26 Z"/>
+    </g>
+  </svg>
+
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Pacific Gateway Careers</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;">
+      <div>
+        <h2 class="section-title">We've been in your shoes.<br /><span class="accent">We got the offers.</span></h2>
+      </div>
+      <div>
+        <p class="section-subtitle">Unlike generic careers services, every Pacific Gateway Careers consultant is a bilingual finance professional who navigated the exact recruitment journey you're on — as an international student, in Australia and the US.</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e52c4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="#1e52c4"/></svg></div>
+        <div class="why-card-text">
+          <h3>Insider Expertise</h3>
+          <div class="cn-label">内部经验，真实指导</div>
+          <p>Our consultants hold or have held roles at the exact firms you're targeting. We know how these banks actually hire — what they're looking for beyond the CV, and how to stand out as an international candidate. Many of our consultants have also been directly involved in junior recruitment at their firms, giving you a genuine insider perspective on how hiring decisions are actually made.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon" style="font-family:'Noto Sans SC',sans-serif;font-size:37px;font-weight:400;color:#d4163c;">中</div>
+        <div class="why-card-text">
+          <h3>Bilingual, by Design</h3>
+          <div class="cn-label">中英双语，无障碍沟通</div>
+          <p>All of our consultants are fully comfortable in both English and Mandarin. We'll work with you to sharpen your professional English for interviews, presentations, and networking — while always having the flexibility to explain complex concepts, frameworks, or feedback in Chinese so nothing gets lost in translation.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e52c4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="why-card-text">
+          <h3>Australia &amp; US Specialists</h3>
+          <div class="cn-label">深耕澳洲与美国市场</div>
+          <p>Two of the world's most competitive finance markets — and despite both being English-speaking, they are very different when it comes to recruitment opportunities, application frameworks, interview styles, and hiring processes. We provide market-specific guidance on recruitment cycles, visa considerations, networking strategies, and firm culture, so you're never applying a one-size-fits-all approach to the wrong market.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d4163c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div>
+        <div class="why-card-text">
+          <h3>End-to-End Support</h3>
+          <div class="cn-label">全程陪伴，从申请到 offer</div>
+          <p>Many recruitment consultancies stop at interview prep — we don't. From the very first conversation about which firms to target, through CV and cover letter crafting, online assessments, networking, every round of interviews, and all the way through to reviewing and signing your full-time offer, we are with you at every single step. Our job isn't done until you've accepted the role you want.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e52c4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11l-5-5-5 5"/><path d="M12 6v13"/><path d="M5 20h14"/></svg></div>
+        <div class="why-card-text">
+          <h3>Personalised &amp; Boutique</h3>
+          <div class="cn-label">精品服务，因材施教</div>
+          <p>Every prospective candidate begins with a 30-minute screening call with one of our consultants. We take the time to understand your background, discuss your goals, and be honest about where you stand. We only take on students where we have strong conviction that we can help them land their target roles — which is why we've maintained an <strong style="color:var(--accent)">88% placement rate</strong> so far. You're never just a number here.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <span class="why-corner why-corner-tl"></span><span class="why-corner why-corner-tr"></span><span class="why-corner why-corner-bl"></span><span class="why-corner why-corner-br"></span>
+        <div class="why-rings"><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span><span class="why-ring"></span></div>
+        <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#d4163c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="why-card-text">
+          <h3>Real-Time Market Knowledge</h3>
+          <div class="cn-label">最新市场动态，实时更新</div>
+          <p>Finance recruitment evolves fast — hiring volumes shift, interview formats change, and firms update what they look for cycle to cycle. Our consultants are active industry professionals, so the guidance you receive is never recycled from years past. We know what's happening in the current cycle and where the real opportunities are, so you're always one step ahead.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRM LOGOS -->
+<section class="firms-section">
+  <div class="label">Our consultants have received offers &amp; held roles at, but not exclusive to</div>
+  <div class="firms-grid">
+    <div class="firm-logo-card"><img src="https://img.logo.dev/goldmansachs.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Goldman Sachs" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/morganstanley.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Morgan Stanley" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/jpmorgan.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="JP Morgan" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/macquarie.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Macquarie" style="height:100px;" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/ubs.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="UBS" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/citi.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Citi" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/bankofamerica.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Bank of America" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/db.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Deutsche Bank" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/nomura.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Nomura" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/kpmg.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="KPMG" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/pwc.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="PwC" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/ey.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="EY" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/westpac.com.au?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Westpac" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/anz.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="ANZ" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/commbank.com.au?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="CBA" /></div>
+    <div class="firm-logo-card"><img src="logo-NAB-logo.png" alt="NAB" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/australiansuper.com.au?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="AustralianSuper" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/accenture.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Accenture" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/bdo.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="BDO" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/grantthornton.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Grant Thornton" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/hsbc.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="HSBC" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/aia.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="AIA" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/tal.com.au?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="TAL" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/unilever.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Unilever" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/loreal.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="L'Oréal" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/microsoft.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Microsoft" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/nestle.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Nestlé" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/amazon.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Amazon" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/salesforce.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Salesforce" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/canva.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Canva" /></div>
+    <div class="firm-logo-card"><img src="https://img.logo.dev/atlassian.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="Atlassian" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/agl.com.au?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="AGL" /></div>
+    <div class="firm-logo-card multiply"><img src="https://img.logo.dev/bhp.com?token=pk_Mkk0SpkiQuOBUQ3EQnLUsg&retina=true" alt="BHP" /></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <svg id="svc-wave-left" class="svc-wave" viewBox="0 0 20 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold-l" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="#a8893e"/>
+        <stop offset="45%"  stop-color="#c8a96e"/>
+        <stop offset="75%"  stop-color="#f0d98a"/>
+        <stop offset="100%" stop-color="#c8a96e"/>
+      </linearGradient>
+      <!-- Light gold shadow underside — visible at top, fades out -->
+      <linearGradient id="shadow-top-l" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#f0d98a" stop-opacity="0.45"/>
+        <stop offset="35%"  stop-color="#f0d98a" stop-opacity="0.18"/>
+        <stop offset="60%"  stop-color="#f0d98a" stop-opacity="0.00"/>
+        <stop offset="100%" stop-color="#f0d98a" stop-opacity="0.00"/>
+      </linearGradient>
+      <!-- Vertical fade: darkens both top and bottom edges -->
+      <linearGradient id="shadow-v-l" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#3d2000" stop-opacity="0.38"/>
+        <stop offset="12%"  stop-color="#3d2000" stop-opacity="0.00"/>
+        <stop offset="88%"  stop-color="#3d2000" stop-opacity="0.00"/>
+        <stop offset="100%" stop-color="#3d2000" stop-opacity="0.38"/>
+      </linearGradient>
+    </defs>
+    <!-- Light gold shadow underside — slightly wider, fades from top -->
+    <path fill="url(#shadow-top-l)" fill-opacity="1"
+      d="M 17.5,0
+         C 17.5,7  16.5,14  16.5,21
+         C 16.5,25 22.5,29  22.5,34
+         C 22.5,39 16.5,43  16.5,48
+         C 16.5,51 17.5,54  17.5,58
+         C 17.5,62 11.5,66  11.5,70
+         C 11.5,74 12.5,77  12.5,82
+         C 12.5,86 10.5,90  10.5,95
+         C 10.5,97 17.5,98  17.5,100
+         L  5,100
+         C  5,98   4,97    4,95
+         C  4,91  -2,86   -2,82
+         C -2,78   5,74    5,70
+         C  5,66   5,62    5,58
+         C  5,54  10,51   10,48
+         C 10,43  10,39   10,34
+         C 10,29  10,25   10,21
+         C 10,14   5,7     5,0
+         Z"/>
+    <!-- Main ribbon body — pinches at y=21,48,70,95; peaks at y=34,58,82 -->
+    <path fill="url(#gold-l)" fill-opacity="0.82"
+      d="M 16,0
+         C 16,7  15,14  15,21
+         C 15,25 21,29  21,34
+         C 21,39 15,43  15,48
+         C 15,51 16,54  16,58
+         C 16,62 10,66  10,70
+         C 10,74 11,77  11,82
+         C 11,86  9,90   9,95
+         C  9,97 16,98  16,100
+         L  6,100
+         C  6,98  5,97   5,95
+         C  5,91 -1,86  -1,82
+         C -1,78  6,74   6,70
+         C  6,66  6,62   6,58
+         C  6,54 11,51  11,48
+         C 11,43 11,39  11,34
+         C 11,29 11,25  11,21
+         C 11,14  6,7    6,0
+         Z"/>
+    <!-- Highlight sheen along leading edge -->
+    <path fill="#f0d98a" fill-opacity="0.28"
+      d="M 16,0
+         C 16,7  15,14  15,21
+         C 15,25 21,29  21,34
+         C 21,39 15,43  15,48
+         C 15,51 16,54  16,58
+         C 16,62 10,66  10,70
+         C 10,74 11,77  11,82
+         C 11,86  9,90   9,95
+         C  9,97 16,98  16,100
+         L 14,100
+         C 14,98  7,97   7,95
+         C  7,91  9,86   9,82
+         C  9,78  8,74   8,70
+         C  8,66 14,62  14,58
+         C 14,54 13,51  13,48
+         C 13,43 13,39  13,34
+         C 13,29 13,25  13,21
+         C 13,14 14,7   14,0
+         Z"/>
+    <!-- Top & bottom vertical shadow overlay -->
+    <path fill="url(#shadow-v-l)" fill-opacity="1"
+      d="M 16,0
+         C 16,7  15,14  15,21
+         C 15,25 21,29  21,34
+         C 21,39 15,43  15,48
+         C 15,51 16,54  16,58
+         C 16,62 10,66  10,70
+         C 10,74 11,77  11,82
+         C 11,86  9,90   9,95
+         C  9,97 16,98  16,100
+         L  6,100
+         C  6,98  5,97   5,95
+         C  5,91 -1,86  -1,82
+         C -1,78  6,74   6,70
+         C  6,66  6,62   6,58
+         C  6,54 11,51  11,48
+         C 11,43 11,39  11,34
+         C 11,29 11,25  11,21
+         C 11,14  6,7    6,0
+         Z"/>
+  </svg>
+
+  <svg id="svc-wave-right" class="svc-wave" viewBox="0 0 20 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold-r" x1="1" y1="0" x2="0" y2="0">
+        <stop offset="0%"   stop-color="#a8893e"/>
+        <stop offset="45%"  stop-color="#c8a96e"/>
+        <stop offset="75%"  stop-color="#f0d98a"/>
+        <stop offset="100%" stop-color="#c8a96e"/>
+      </linearGradient>
+      <linearGradient id="shadow-v-r" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#3d2000" stop-opacity="0.38"/>
+        <stop offset="12%"  stop-color="#3d2000" stop-opacity="0.00"/>
+        <stop offset="88%"  stop-color="#3d2000" stop-opacity="0.00"/>
+        <stop offset="100%" stop-color="#3d2000" stop-opacity="0.38"/>
+      </linearGradient>
+    </defs>
+    <g transform="translate(20,0) scale(-1,1)">
+      <!-- Main ribbon body -->
+      <path fill="url(#gold-r)" fill-opacity="0.82"
+        d="M 16,0
+           C 16,4  15,8   15,12
+           C 15,16 22,21  22,25
+           C 22,29 15,34  15,38
+           C 15,42 16,46  16,50
+           C 16,54 10,58  10,62
+           C 10,66 12,71  12,75
+           C 12,79 10,84  10,88
+           C 10,92 16,96  16,100
+           L  6,100
+           C  6,96  6,92   6,88
+           C  6,84  0,79   0,75
+           C  0,71  6,66   6,62
+           C  6,58  6,54   6,50
+           C  6,46 11,42  11,38
+           C 11,34 10,29  10,25
+           C 10,21 11,16  11,12
+           C 11,8   6,4    6,0
+           Z"/>
+      <!-- Highlight sheen -->
+      <path fill="#f0d98a" fill-opacity="0.28"
+        d="M 16,0
+           C 16,4  15,8   15,12
+           C 15,16 22,21  22,25
+           C 22,29 15,34  15,38
+           C 15,42 16,46  16,50
+           C 16,54 10,58  10,62
+           C 10,66 12,71  12,75
+           C 12,79 10,84  10,88
+           C 10,92 16,96  16,100
+           L 14,100
+           C 14,96 13,92  13,88
+           C 13,84  7,79   7,75
+           C  7,71 13,66  13,62
+           C 13,58 14,54  14,50
+           C 14,46 14,42  14,38
+           C 14,34 20,29  20,25
+           C 20,21 14,16  14,12
+           C 14,8  14,4   14,0
+           Z"/>
+      <!-- Top & bottom vertical shadow overlay -->
+      <path fill="url(#shadow-v-r)" fill-opacity="1"
+        d="M 16,0
+           C 16,4  15,8   15,12
+           C 15,16 22,21  22,25
+           C 22,29 15,34  15,38
+           C 15,42 16,46  16,50
+           C 16,54 10,58  10,62
+           C 10,66 12,71  12,75
+           C 12,79 10,84  10,88
+           C 10,92 16,96  16,100
+           L  6,100
+           C  6,96  6,92   6,88
+           C  6,84  0,79   0,75
+           C  0,71  6,66   6,62
+           C  6,58  6,54   6,50
+           C  6,46 11,42  11,38
+           C 11,34 10,29  10,25
+           C 10,21 11,16  11,12
+           C 11,8   6,4    6,0
+           Z"/>
+    </g>
+  </svg>
+  <div class="section-inner">
+    <div class="section-eyebrow">What We Offer</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:0;">
+      <div>
+        <h2 class="section-title">Every service you need to <span class="accent">land the offer</span></h2>
+      </div>
+      <div>
+        <p class="section-subtitle">Based on our expertise, the finance recruitment process involves <strong>9 key components and steps</strong>. We highly recommend students build a strong foundation in all 9 components in order to rank ahead of other candidates and land their target roles. All our consultants have not only leveraged this structure to land top finance jobs in Australia and the USA, but have also coached several international students to achieve the same success.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-num="01">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:11.1%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">01</div>
+        <h3>Identifying and Selecting Target Companies and Roles</h3>
+        <div class="cn">目标公司与岗位精准定位</div>
+        <p>The right starting point determines everything. We help you map the finance landscape — from bulge bracket banks to boutique advisory firms and Big 4 — and identify the companies and roles that best match your background, visa status, and career ambitions. Applying strategically beats applying broadly every time.</p>
+        <div class="service-features">
+          <div class="service-feature">Firm and division landscape overview (IB, M&amp;A, Markets, Accounting, AM)</div>
+          <div class="service-feature">Visa-aware targeting for AU and US roles</div>
+          <div class="service-feature">Role suitability assessment based on your profile</div>
+          <div class="service-feature">Application priority and timeline planning</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="02">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:22.2%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">02</div>
+        <h3>CV &amp; Cover Letter Mastery</h3>
+        <div class="cn">简历与求职信辅导</div>
+        <p>A finance CV is a very different beast from a graduate resume. We rewrite and optimise your documents to meet the exacting standards of investment banks, Big 4 firms, and asset managers — using formats and language that hiring managers respond to. We also craft tailored cover letters that speak to each firm's culture, giving you a complete package.</p>
+        <div class="service-features">
+          <div class="service-feature">ATS-optimised, finance-specific formatting</div>
+          <div class="service-feature">Tailored to IB, Markets, Accounting &amp; Asset Management roles</div>
+          <div class="service-feature">Custom cover letters for each target firm</div>
+          <div class="service-feature">Unlimited revisions until you're satisfied</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="03">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:33.3%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">03</div>
+        <h3>Leveraging LinkedIn, Networking and Coffees</h3>
+        <div class="cn">人脉建设、LinkedIn 优化与咖啡聊天</div>
+        <p>In finance, who you know matters. We teach you how to identify and approach professionals at target firms, craft cold outreach that gets responses, and build a LinkedIn presence that puts you on recruiters' radars. A well-executed coffee chat can be the difference between an application and a referral.</p>
+        <div class="service-features">
+          <div class="service-feature">LinkedIn profile optimisation</div>
+          <div class="service-feature">Cold email &amp; outreach message templates</div>
+          <div class="service-feature">Coffee chat preparation and etiquette</div>
+          <div class="service-feature">Referral strategy for target firms</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="04">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:44.4%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">04</div>
+        <h3>Overcoming Psychometric Assessments</h3>
+        <div class="cn">心理测评与网测辅导</div>
+        <p>HireVue, Pymetrics, numerical reasoning, situational judgement, and case studies — we've completed them all. We prepare you with practice sets, proven strategies, and the pattern recognition needed to score in the top percentile and clear the first filter.</p>
+        <div class="service-features">
+          <div class="service-feature">Numerical &amp; verbal reasoning drill packs</div>
+          <div class="service-feature">Pymetrics games coaching &amp; trait strategy</div>
+          <div class="service-feature">Situational judgement test frameworks</div>
+          <div class="service-feature">Big 4 &amp; bank-specific assessment walkthroughs</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="05">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:55.6%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">05</div>
+        <h3>Standing Out in Video Interviews</h3>
+        <div class="cn">视频面试脱颖而出</div>
+        <p>One-way video interviews are now standard at most major firms — and they're surprisingly easy to fail without preparation. We coach you on structure, delivery, framing, and the subtle cues that assessors look for, so you come across as confident, articulate, and memorable even without a live interviewer in the room.</p>
+        <div class="service-features">
+          <div class="service-feature">HireVue and one-way video format preparation</div>
+          <div class="service-feature">Answer structure and time management techniques</div>
+          <div class="service-feature">Camera presence, pacing, and delivery coaching</div>
+          <div class="service-feature">Practice recordings with detailed feedback</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="06">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:66.7%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">06</div>
+        <h3>Behavioural Interview Mastery</h3>
+        <div class="cn">行为面试全攻略</div>
+        <p>Competency and motivational questions are the backbone of every finance interview. We help you build a compelling story bank using the STAR framework, craft authentic answers to the toughest questions, and position your background in a way that resonates with GS, JPMorgan, and Big 4 interviewers.</p>
+        <div class="service-features">
+          <div class="service-feature">STAR framework coaching with your own experiences</div>
+          <div class="service-feature">Firm-specific motivational question preparation</div>
+          <div class="service-feature">"Why finance / why this firm" narrative development</div>
+          <div class="service-feature">Common pitfalls and how to avoid them</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="07">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:77.8%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">07</div>
+        <h3>Technical Interview Mastery</h3>
+        <div class="cn">技术面试全攻略</div>
+        <p>From DCF and LBO to accounting fundamentals and market knowledge, technical rounds separate candidates who prepared from those who didn't. We drill you on the exact question types used by each firm, build your conceptual fluency, and ensure you can think through problems under live pressure.</p>
+        <div class="service-features">
+          <div class="service-feature">Finance &amp; valuation question banks (IB, AM, M&amp;A)</div>
+          <div class="service-feature">Accounting &amp; financial statement drill questions</div>
+          <div class="service-feature">Markets knowledge and current events prep</div>
+          <div class="service-feature">Firm-specific technical format coaching</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="08">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:88.9%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">08</div>
+        <h3>Mock Interviews + Feedback</h3>
+        <div class="cn">模拟面试与专业反馈</div>
+        <p>Knowing the answer and performing under interview pressure are two different skills. Our consultants — who have sat on both sides of the table — run full-length mock interviews that replicate real firm conditions, then deliver structured, honest feedback so you improve with every session.</p>
+        <div class="service-features">
+          <div class="service-feature">Full-length 1-on-1 mock interviews</div>
+          <div class="service-feature">Behavioural and technical rounds covered</div>
+          <div class="service-feature">Written debrief with specific improvement actions</div>
+          <div class="service-feature">Repeat sessions available until interview-ready</div>
+        </div>
+      </div>
+      <div class="service-card" data-num="09">
+      <div class="step-progress"><div class="step-progress-fill" style="--fill:100%"></div></div>
+        <div class="shimmer"></div>
+        <div class="service-number">09</div>
+        <h3>Internship to Graduate Conversion</h3>
+        <div class="cn">实习转正全攻略</div>
+        <p>Converting an internship into a graduate offer is a skill in itself — and one that many international students underestimate. We coach you on how to stand out during the rotation, build the right internal relationships, navigate mid-internship reviews, and avoid the mistakes that cost candidates a return offer.</p>
+        <div class="service-features">
+          <div class="service-feature">On-the-job performance and visibility coaching</div>
+          <div class="service-feature">Stakeholder management &amp; impression strategy</div>
+          <div class="service-feature">Mid-internship review preparation</div>
+          <div class="service-feature">Return offer positioning and timing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Services -->
+    <div style="margin-top:48px;">
+      <div style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray-400);margin-bottom:20px;">Additional Services</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div style="background:var(--gray-100);border:1.5px solid var(--gray-200);border-top:4px solid var(--accent);border-radius:16px;padding:28px;">
+          <h3 style="font-size:16px;font-weight:800;color:var(--primary);margin-bottom:6px;">Visa Advice</h3>
+          <div style="font-family:'Noto Sans SC',sans-serif;font-size:12px;color:var(--gray-400);margin-bottom:12px;">签证咨询</div>
+          <p style="font-size:13px;line-height:1.7;color:var(--gray-600);margin:0;">Guidance on graduate visa pathways, work rights, and employer sponsorship options in Australia and the United States — so your job search accounts for your immigration timeline from day one.</p>
+        </div>
+        <div style="background:var(--gray-100);border:1.5px solid var(--gray-200);border-top:4px solid var(--accent);border-radius:16px;padding:28px;">
+          <h3 style="font-size:16px;font-weight:800;color:var(--primary);margin-bottom:6px;">Contract Negotiation</h3>
+          <div style="font-family:'Noto Sans SC',sans-serif;font-size:12px;color:var(--gray-400);margin-bottom:12px;">薪资与合同谈判</div>
+          <p style="font-size:13px;line-height:1.7;color:var(--gray-600);margin:0;">Once the offer arrives, the negotiation begins. We advise on base salary, signing bonuses, and leave entitlements — and coach you on how to negotiate confidently without jeopardising your offer.</p>
+        </div>
+        <div style="background:var(--gray-100);border:1.5px solid var(--gray-200);border-top:4px solid var(--accent);border-radius:16px;padding:28px;">
+          <h3 style="font-size:16px;font-weight:800;color:var(--primary);margin-bottom:6px;">Microsoft Excel &amp; PowerPoint Training</h3>
+          <div style="font-family:'Noto Sans SC',sans-serif;font-size:12px;color:var(--gray-400);margin-bottom:12px;">Excel 与 PowerPoint 实战培训</div>
+          <p style="font-size:13px;line-height:1.7;color:var(--gray-600);margin:0;">Finance roles expect day-one proficiency in Excel and PowerPoint. We run targeted training sessions covering financial modelling in Excel and the slide-building standards used in investment banking and consulting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section class="section markets-section" id="markets">
+
+  <!-- World map background — 80% transparent, behind all content -->
+  <img src="BlankMap-World.svg" class="markets-worldmap" alt="" aria-hidden="true">
+
+  <div class="section-inner">
+    <div class="section-eyebrow">Our Specialist Markets</div>
+    <h2 class="section-title">Deep expertise in the markets<br />that matter to you</h2>
+    <div class="markets-editorial">
+      <div class="market-editorial au" data-flag="🇦🇺">
+        <div class="market-editorial-country">Australia</div>
+        <div class="market-editorial-cn">澳大利亚金融市场</div>
+        <p>Australia is one of Asia's most sought-after finance markets for international students — offering genuine access to world-class institutions across investment banking, Big 4 advisory, and asset management. Its recruitment cycle is highly structured and timeline-driven, and we know it intimately: when to apply, which firms to prioritise, and how to position yourself compellingly in Sydney or Melbourne.</p>
+        <p>Relative to the United States, Australia is a smaller market with a more limited number of internship and graduate openings each cycle — which makes the competition for each role considerably more intense. In this environment, standing out requires more than a polished CV. Australian hiring managers place meaningful weight on individuality, genuine personality, and interpersonal presence. Candidates who present a distinctive, well-rounded profile consistently outperform those who rely solely on credentials. Simply mirroring what every other applicant submits will rarely be sufficient to land your target role.</p>
+      </div>
+
+      <div class="market-divider"></div>
+      <div class="market-editorial us" data-flag="🇺🇸">
+        <div class="market-editorial-country">United States</div>
+        <div class="market-editorial-cn">美国金融市场</div>
+        <p>The United States remains the world's preeminent finance market — home to the largest concentration of global banks, asset managers, and financial institutions across New York, Chicago, San Francisco, Boston, and beyond. Breaking in as an international student demands a high level of preparation and precise strategic positioning. Our consultants have first-hand experience navigating the US superday, OCI recruiting process, and bulge bracket hiring cycles.</p>
+        <p>Unlike Australia, the US market offers significantly more openings across a far greater number of financial centres and firm types. The approach to recruitment here is correspondingly different — there is less emphasis on individual differentiation and greater focus on demonstrating exceptional technical and behavioural fundamentals across the 9 core recruitment categories we have identified. Firms at this level recruit at scale and are looking for candidates whose profile closely matches the archetype of their typical junior hire or intern class. Getting those fundamentals right, consistently and convincingly, is what separates successful candidates from the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTANTS -->
+<section class="section consultants-section" id="consultants">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Team</div>
+    <h2 class="section-title">Consultants who've done it</h2>
+    <p class="section-subtitle">Our team is intentionally small and senior. Every consultant is a bilingual finance professional who completed their own journey — and came out with top-tier offers.</p>
+
+    <div class="consultants-intro">
+      <div class="consultants-intro-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <p>To protect their professional relationships, our consultants prefer to stay anonymous — and we respect that. What we can tell you is that every person on this team has personally navigated the exact recruitment process you're about to go through, and landed at some of the most competitive firms in Australia and the United States. The profiles below are representative of their backgrounds. The specifics have been adjusted to preserve anonymity, but the calibre is real.</p>
+    </div>
+
+    <!-- Success flair -->
+    <div class="success-flair">
+      <div class="flair-item"><div class="flair-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="flair-label">AU &amp; US Markets</div></div>
+      <div class="flair-item"><div class="flair-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4163c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg></div><div class="flair-label">Offers Secured</div></div>
+      <div class="flair-item"><div class="flair-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div class="flair-label">Contracts Signed</div></div>
+      <div class="flair-item"><div class="flair-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d4163c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="22" x2="22" y2="22"/><path d="M16 3v19"/><path d="M8 3h8"/><path d="M16 3.5L9 5.5v16l7-1.5V3.5z"/><circle cx="10.8" cy="13" r="0.9" fill="#d4163c"/></svg></div><div class="flair-label">Doors Opened</div></div>
+      <div class="flair-item"><div class="flair-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="flair-label">Dream Career</div></div>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="profile-header-text">
+            <div class="profile-role">Lead Consultant</div>
+            <div class="profile-name">Consultant A</div>
+          </div>
+        </div>
+        <div class="profile-market">🇦🇺 Australia</div>
+        <div class="profile-timeline">
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">99.5+ ATAR</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">HD WAM — GO8 University Graduate with Honours</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Finance Club President</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Big 4 Banking Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">3+ Big 4 Accounting Offers</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Boutique Private Equity Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Full-time Graduate — US Bulge Bracket Investment Bank</div></div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d4163c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="profile-header-text">
+            <div class="profile-role">Senior Consultant</div>
+            <div class="profile-name">Consultant B</div>
+          </div>
+        </div>
+        <div class="profile-market">🇺🇸 United States</div>
+        <div class="profile-timeline">
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">1550+ SAT — 4.0 GPA</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Ivy League College Graduate</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Finance Club Vice President</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Big 4 Accounting Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Business Internship at S&amp;P 500 Corporate</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Boutique Investment Banking Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Full-time Graduate — US Bulge Bracket Investment Bank</div></div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="profile-header-text">
+            <div class="profile-role">Consultant</div>
+            <div class="profile-name">Consultant C</div>
+          </div>
+        </div>
+        <div class="profile-market">🇦🇺 Australia</div>
+        <div class="profile-timeline">
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">99+ ATAR — 80+ WAM</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">GO8 University Graduate with Full Scholarship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Consulting Club VP &amp; Finance Club Director</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Big 4 Accounting Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">2+ Big 4 Accounting Offers</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Boutique Investment Banking Internship</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-text">Full-time Graduate — US Private Equity Megafund</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:0;">
+      <div class="section-eyebrow" style="text-align:center;">How It Works</div>
+      <h2 class="section-title" style="text-align:center;">From first call to <span class="accent">offer letter</span></h2>
+      <p class="section-subtitle" style="text-align:center;margin:0 auto 0;">A clear, structured process designed to maximise your chances at every stage of recruitment.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-circle">1</div>
+        <h4>Free Enquiry</h4>
+        <div class="cn">免费报名咨询</div>
+        <p>Submit your name, CV, education and work history, current situation, and recruitment goals. Scan our WeChat QR code so a consultant can reach out directly.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">2</div>
+        <h4>Free Consultation</h4>
+        <div class="cn">免费咨询通话</div>
+        <p>Your consultant reviews your submission and organises a free 30-minute call to discuss your situation and a proposed recruitment plan — tailored to your profile, and flexible to adjust at any time.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">3</div>
+        <h4>Preparation</h4>
+        <div class="cn">全力备战</div>
+        <p>Begin targeted lessons and preparation designed specifically for you — building the strongest possible candidacy so you're ready to apply and interview with confidence.</p>
+      </div>
+      <div class="process-step step-goal">
+        <div class="step-circle">4</div>
+        <h4>Land Your Dream Role 🎉</h4>
+        <div class="cn">梦想 offer 到手</div>
+        <p>You land your target offers and start your dream full-time career in finance. This is the moment everything was building towards.</p>
+      </div>
+      <div class="process-step step-optional">
+        <div class="step-optional-tag">Optional</div>
+        <div class="step-circle">5</div>
+        <h4>Post-Offer Support</h4>
+        <div class="cn">入职后续支持</div>
+        <p>Contract negotiation and on-the-job coaching to ensure you're well prepared to perform and succeed in the role you've earned.</p>
+      </div>
+    </div>
+
+    <div class="process-imagery">
+      <div class="process-imagery-item" style="background-image:url('Handshake.jpg');">
+        <div class="process-imagery-label">Offer Secured</div>
+      </div>
+      <div class="process-imagery-item" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop&q=80');">
+        <div class="process-imagery-label">Contract Signed</div>
+      </div>
+      <div class="process-imagery-item" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop&q=80');">
+        <div class="process-imagery-label">First Day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section" id="testimonials">
+  <div class="section-inner">
+    <div class="section-eyebrow">Success Stories</div>
+    <h2 class="section-title">Students who <span class="accent">made it</span></h2>
+    <p class="section-subtitle">A small but growing collection of outcomes from our first cohort of clients. Every story is real.</p>
+    <div class="testimonials-carousel">
+      <div class="testimonials-track">
+        <div class="testimonial-card" data-pos="active">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">I had no idea where to even start with IB recruitment in Australia. My consultant walked me through the entire process — from building a finance CV from scratch to preparing for investment banking superdays and final round interviews. I got a summer analyst offer after four months of working together.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">🎓</div>
+            <div class="author-info">
+              <div class="author-name">W.X. — Sydney</div>
+              <div class="review-date">Feb '26</div>
+              <div class="author-detail">Bachelor of Commerce · University of Sydney · Bulge Bracket IBD Summer Analyst</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-pos="next">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">I never understood how to frame my answers to behavioural questions so I just ended up telling long stories with no point. My consultant taught me how to correctly frame and deliver interview responses confidently and effectively, and I was able to practise this a lot in the mock interviews. The mock interviews were more intense than the real thing, and by the time I sat my Big 4 interviews, I felt totally prepared and ended up with three offers. Being able to debrief in Mandarin after each session made a huge difference for me.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">🎓</div>
+            <div class="author-info">
+              <div class="author-name">J.L. — New York</div>
+              <div class="review-date">Mar '26</div>
+              <div class="author-detail">Bachelor of Science · Cornell University · Big 4 M&A Intern</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">I came to Pacific Gateway Careers after failing to land any interviews from the Big 4 Banks and Big 4 accounting firms in Australia. We completely reworked my story, my CV, my interview answers and my approach to recruitment. When I applied again the next round, I got interviews from four of these companies and got two offers. Honestly couldn't have done it without the support — they genuinely cared about the outcome.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">🎓</div>
+            <div class="author-info">
+              <div class="author-name">M.C. — Melbourne</div>
+              <div class="review-date">Apr '26</div>
+              <div class="author-detail">Bachelor of Accounting · University of Melbourne · Big 4 Deals Graduate</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">I came to PGC after failing to land any internships in my penultimate year of university. The consultant I had was very patient and did not judge me at all, gradually helping me identify and work through all my weaknesses and calming my anxiety when my first few interviews were still a failure. I had wanted to give up halfway through but the PGC team was very encouraging throughout the process, and I eventually landed a finance offer with a big firm that I am really happy with!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="author-info">
+              <div class="author-name">K.S. — Sydney</div>
+              <div class="review-date">May '26</div>
+              <div class="author-detail">Bachelor of Commerce / Advanced Studies · University of Sydney</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★<span style="opacity:0.35;">★</span></span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">The consultants at PGC are all really successful, qualified and knowledgeable. Sometimes it took longer than proposed to cover certain topics, but I must admit that the consultants I had were super detailed with their advice, and their work paid off when I landed an offer at one of the Big 4!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="author-info">
+              <div class="author-name">L.L. — Sydney</div>
+              <div class="review-date">Mar '26</div>
+              <div class="author-detail">Bachelor of Economics · University of Sydney · Big 4 Offer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">These guys are masters at revising CVs and Cover Letters. I was barely getting any interviews at all for half a year, and then after I worked with the consultants at PGC I immediately noticed a significant increase in the amount of responses and interviews I received from my applications. It still took a few tries to finally land an offer, but I couldn't have done it without PGC's help.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="author-info">
+              <div class="author-name">L.D. — Sydney</div>
+              <div class="review-date">Jun '26</div>
+              <div class="author-detail">Bachelor of Commerce · UNSW</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-header">
+            <div class="outcome-badge">🎉 Graduate Offer Received</div>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">At first, I was very skeptical of the program PGC offered me and whether all the content was really useful. However, after going through the entire program, I can confidently attest that each component represents an integral step in the finance recruitment process, and was very necessary in order for me to land my dream role. The mock exams were particularly helpful to bring everything together and complete my preparation.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div class="author-info">
+              <div class="author-name">A.Q. — California</div>
+              <div class="review-date">Apr '26</div>
+              <div class="author-detail">Master of Science (Finance) · University of Southern California</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="testimonial-prev">&#8592;</button>
+        <div class="carousel-dots">
+          <span class="carousel-dot active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
+        <button class="carousel-btn" id="testimonial-next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-content">
+    <h2>Ready to <span>land your offer?</span></h2>
+    <div class="cn">准备好拿下你的 offer 了吗？</div>
+    <p>Book a free 30-minute consultation. We'll assess your profile, identify your strongest target roles, and explain exactly how we'd approach your recruitment — no obligation, no pressure.</p>
+    <div class="cta-buttons">
+      <a href="consultation.html" class="btn-large btn-red">Book Free Consultation</a>
+      <a href="contact.html" class="btn-large btn-outline">Contact Us</a>
+    </div>
+    <p style="margin-top:32px;font-size:13px;color:rgba(255,255,255,0.3);letter-spacing:0.5px;">
+      Available via WeChat · WhatsApp · Email &nbsp;|&nbsp; 微信 · WhatsApp · 电子邮件
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo" style="display:inline-flex;">
+        <div class="logo-mark">PG</div>
+        <div class="logo-text">Pacific Gateway <span>Careers</span><div class="logo-cn">太平洋职桥</div></div>
+      </div>
+      <p>A boutique finance career consultancy for Chinese international students targeting top roles in Australia and the United States.</p>
+      <div class="cn">专为留学生打造的顶级金融求职顾问服务</div>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="contact.html">Email Us</a></li>
+        <li><a href="contact.html">WeChat / 微信</a></li>
+        <li><a href="contact.html">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Pacific Gateway Careers. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // ── Country synapse outlines ──
+  (function() {
+    const container = document.getElementById('synapseContainer');
+    const W = window.innerWidth, H = window.innerHeight;
+    const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('width','100%'); svg.setAttribute('height','100%');
+    svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+    svg.style.cssText = 'position:absolute;inset:0';
+    container.appendChild(svg);
+
+    const rand = (a,b) => a + Math.random()*(b-a);
+    const J = 1.5; // tiny jitter — keeps shape clear
+
+    // Normalised pts derived from real lat/lon:
+    // USA  nx=(125-lon_W)/58  ny=(49-lat)/24.5
+    // China nx=(lon_E-73)/62  ny=(53-lat)/35
+    // Aus  nx=(lon_E-113)/41  ny=(lat_S-10)/29.5
+    const defs = {
+      usa: {
+        x0: W-741, x1: W-38, y0: 111, y1: 567,
+        pts:[
+          [0.136,0.147],[0.140,0.198],[0.126,0.246],[0.118,0.272],
+          [0.110,0.286],[0.111,0.312],[0.111,0.341],[0.097,0.349],
+          [0.104,0.375],[0.101,0.402],[0.110,0.430],[0.111,0.461],
+          [0.122,0.472],[0.112,0.487],[0.123,0.514],[0.123,0.546],
+          [0.139,0.551],[0.156,0.574],[0.153,0.588],[0.169,0.598],
+          [0.169,0.626],[0.207,0.625],[0.206,0.638],[0.259,0.684],
+          [0.306,0.696],[0.308,0.671],[0.332,0.687],[0.350,0.709],
+          [0.360,0.725],[0.364,0.752],[0.381,0.771],[0.399,0.750],
+          [0.417,0.756],[0.444,0.819],[0.448,0.853],[0.477,0.876],
+          [0.481,0.865],[0.477,0.816],[0.490,0.809],[0.486,0.788],
+          [0.497,0.796],[0.519,0.789],[0.523,0.752],[0.540,0.763],
+          [0.557,0.769],[0.574,0.766],[0.587,0.777],[0.603,0.779],
+          [0.611,0.766],[0.626,0.787],[0.622,0.758],[0.604,0.740],
+          [0.630,0.739],[0.638,0.720],[0.650,0.741],[0.678,0.734],
+          [0.687,0.757],[0.703,0.729],[0.725,0.751],[0.728,0.795],
+          [0.749,0.815],[0.752,0.846],[0.772,0.863],[0.786,0.857],
+          [0.788,0.814],[0.763,0.781],[0.747,0.715],[0.748,0.663],
+          [0.768,0.645],[0.781,0.609],[0.802,0.582],[0.819,0.561],
+          [0.808,0.549],[0.819,0.541],[0.800,0.532],[0.819,0.524],
+          [0.796,0.509],[0.814,0.505],[0.800,0.486],[0.818,0.492],
+          [0.803,0.474],[0.822,0.466],[0.808,0.439],[0.819,0.441],
+          [0.828,0.408],[0.825,0.385],[0.854,0.362],[0.853,0.347],
+          [0.865,0.353],[0.878,0.338],[0.859,0.335],[0.863,0.310],
+          [0.873,0.274],[0.879,0.257],[0.886,0.272],[0.899,0.241],
+          [0.885,0.215],[0.877,0.174],[0.855,0.184],[0.844,0.218],
+          [0.857,0.234],[0.841,0.255],[0.804,0.273],[0.780,0.302],
+          [0.786,0.321],[0.765,0.338],[0.746,0.338],[0.750,0.356],
+          [0.733,0.377],[0.715,0.400],[0.684,0.397],[0.695,0.371],
+          [0.694,0.329],[0.679,0.341],[0.681,0.297],[0.661,0.290],
+          [0.656,0.318],[0.648,0.302],[0.642,0.318],[0.633,0.346],
+          [0.642,0.353],[0.647,0.381],[0.634,0.412],[0.624,0.385],
+          [0.622,0.347],[0.632,0.306],[0.622,0.317],[0.631,0.286],
+          [0.654,0.279],[0.652,0.259],[0.627,0.265],[0.610,0.259],
+          [0.621,0.231],[0.599,0.255],[0.591,0.279],[0.585,0.257],
+          [0.561,0.272],[0.589,0.228],[0.557,0.232],[0.548,0.206],
+          [0.529,0.229],[0.521,0.201],[0.463,0.206],[0.405,0.195],
+          [0.320,0.179],[0.241,0.159],[0.170,0.123],[0.170,0.153],
+          [0.162,0.188],[0.160,0.148],[0.158,0.181],[0.151,0.147],
+          [0.141,0.128],
+        ]
+      },
+      china: {
+        x0: 31, x1: 584, y0: 104, y1: 551,
+        pts:[
+          [0.015,0.411],[0.018,0.347],[0.024,0.329],[0.045,0.327],
+          [0.064,0.341],[0.084,0.323],[0.109,0.329],[0.138,0.321],
+          [0.147,0.296],[0.155,0.244],[0.139,0.237],[0.151,0.232],
+          [0.175,0.234],[0.192,0.251],[0.192,0.226],[0.207,0.182],
+          [0.228,0.210],[0.251,0.195],[0.250,0.167],[0.267,0.174],
+          [0.269,0.154],[0.288,0.145],[0.293,0.181],[0.317,0.197],
+          [0.327,0.243],[0.314,0.268],[0.362,0.279],[0.379,0.305],
+          [0.391,0.300],[0.389,0.310],[0.402,0.340],[0.453,0.350],
+          [0.461,0.341],[0.493,0.353],[0.528,0.374],[0.536,0.356],
+          [0.549,0.381],[0.588,0.349],[0.627,0.348],[0.658,0.311],
+          [0.639,0.282],[0.653,0.268],[0.687,0.281],[0.698,0.255],
+          [0.717,0.262],[0.719,0.240],[0.737,0.225],[0.771,0.213],
+          [0.753,0.186],[0.734,0.185],[0.729,0.197],[0.710,0.186],
+          [0.703,0.195],[0.696,0.180],[0.708,0.137],[0.756,0.132],
+          [0.748,0.116],[0.759,0.052],[0.747,0.050],[0.791,0.015],
+          [0.809,0.031],[0.822,0.015],[0.879,0.107],[0.918,0.107],
+          [0.936,0.133],[0.981,0.105],[0.987,0.162],[0.978,0.198],
+          [0.959,0.194],[0.950,0.213],[0.967,0.265],[0.946,0.268],
+          [0.935,0.302],[0.919,0.296],[0.932,0.325],[0.898,0.311],
+          [0.873,0.372],[0.826,0.416],[0.831,0.393],[0.821,0.393],
+          [0.834,0.365],[0.812,0.346],[0.797,0.379],[0.779,0.397],
+          [0.788,0.417],[0.756,0.412],[0.755,0.439],[0.779,0.435],
+          [0.797,0.464],[0.820,0.434],[0.836,0.448],[0.859,0.440],
+          [0.852,0.461],[0.824,0.477],[0.805,0.526],[0.833,0.535],
+          [0.841,0.574],[0.872,0.591],[0.830,0.597],[0.878,0.616],
+          [0.836,0.634],[0.881,0.640],[0.869,0.684],[0.848,0.722],
+          [0.835,0.731],[0.850,0.765],[0.824,0.783],[0.808,0.800],
+          [0.801,0.830],[0.773,0.838],[0.753,0.863],[0.729,0.850],
+          [0.723,0.875],[0.700,0.883],[0.680,0.890],[0.667,0.895],
+          [0.671,0.915],[0.654,0.915],[0.648,0.890],[0.621,0.878],
+          [0.600,0.895],[0.585,0.855],[0.556,0.847],[0.534,0.870],
+          [0.483,0.872],[0.492,0.911],[0.468,0.895],[0.453,0.909],
+          [0.436,0.880],[0.450,0.849],[0.430,0.820],[0.396,0.837],
+          [0.429,0.781],[0.433,0.734],[0.405,0.708],[0.390,0.743],
+          [0.330,0.756],[0.292,0.740],[0.284,0.706],[0.261,0.702],
+          [0.237,0.733],[0.232,0.698],[0.204,0.710],[0.183,0.694],
+          [0.154,0.687],[0.146,0.652],[0.127,0.645],[0.113,0.611],
+          [0.091,0.627],[0.053,0.589],[0.052,0.540],[0.080,0.558],
+          [0.072,0.511],[0.086,0.502],[0.066,0.466],[0.030,0.456],
+          [0.037,0.427],
+        ]
+      },
+      hk: {
+        x0: 31, x1: 584, y0: 104, y1: 551,
+        pts:[
+          [0.667,0.938],[0.684,0.949],[0.677,0.970],
+          [0.652,0.988],[0.634,0.962],[0.647,0.950],
+        ]
+      },
+
+      australia: {
+        x0: 243, x1: 601, y0: H*0.595, y1: H*0.924,
+        pts:[
+          [0.647,0.232],[0.631,0.212],[0.600,0.220],[0.580,0.195],
+          [0.538,0.176],[0.559,0.150],[0.539,0.142],[0.574,0.101],
+          [0.550,0.091],[0.537,0.116],[0.488,0.106],[0.468,0.082],
+          [0.417,0.087],[0.431,0.105],[0.424,0.116],[0.400,0.128],
+          [0.375,0.158],[0.404,0.189],[0.366,0.187],[0.339,0.160],
+          [0.317,0.164],[0.281,0.187],[0.289,0.228],[0.260,0.219],
+          [0.266,0.261],[0.249,0.234],[0.222,0.250],[0.228,0.276],
+          [0.213,0.313],[0.176,0.318],[0.152,0.339],[0.123,0.346],
+          [0.080,0.367],[0.090,0.416],[0.058,0.374],[0.049,0.402],
+          [0.073,0.449],[0.049,0.449],[0.097,0.501],[0.043,0.477],
+          [0.074,0.524],[0.119,0.556],[0.148,0.603],[0.147,0.642],
+          [0.137,0.664],[0.201,0.674],[0.216,0.654],[0.245,0.653],
+          [0.247,0.632],[0.266,0.630],[0.318,0.635],[0.320,0.601],
+          [0.367,0.590],[0.418,0.557],[0.471,0.562],[0.513,0.554],
+          [0.520,0.592],[0.544,0.587],[0.543,0.624],[0.563,0.635],
+          [0.599,0.568],[0.586,0.635],[0.619,0.616],[0.609,0.648],
+          [0.637,0.637],[0.631,0.683],[0.667,0.686],[0.677,0.716],
+          [0.696,0.685],[0.725,0.716],[0.746,0.682],[0.749,0.702],
+          [0.771,0.712],[0.785,0.714],[0.814,0.682],[0.853,0.684],
+          [0.858,0.621],[0.875,0.635],[0.872,0.592],[0.891,0.597],
+          [0.912,0.544],[0.929,0.534],[0.938,0.464],[0.939,0.427],
+          [0.917,0.439],[0.934,0.397],[0.907,0.364],[0.881,0.369],
+          [0.877,0.323],[0.860,0.339],[0.839,0.300],[0.850,0.286],
+          [0.825,0.284],[0.771,0.238],[0.782,0.206],[0.755,0.191],
+          [0.774,0.165],[0.744,0.142],[0.725,0.159],[0.716,0.108],
+          [0.739,0.095],[0.719,0.082],[0.700,0.047],[0.678,0.077],
+          [0.684,0.092],[0.669,0.122],[0.674,0.171],
+        ]
+      },
+      tas: {
+        x0: 243, x1: 601, y0: H*0.595, y1: H*0.924,
+        pts:[
+          [0.744,0.761],[0.772,0.769],[0.812,0.754],[0.827,0.789],
+          [0.800,0.801],[0.776,0.830],[0.760,0.821],[0.747,0.794],
+        ]
+      }
+    };
+
+    function buildNodes(def) {
+      return def.pts.map(([nx,ny]) => ({
+        x: def.x0 + nx*(def.x1-def.x0) + rand(-J,J),
+        y: def.y0 + ny*(def.y1-def.y0) + rand(-J,J),
+      }));
+    }
+
+    const usaNodes = buildNodes(defs.usa);
+    const chnNodes = buildNodes(defs.china);
+    const hkNodes  = buildNodes(defs.hk);
+    const ausNodes = buildNodes(defs.australia);
+    const tasNodes = buildNodes(defs.tas);
+
+    function drawOutline(nodes) {
+      for (let i=0; i<nodes.length-1; i++) {
+        const a=nodes[i], b=nodes[i+1];
+        const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+        ln.setAttribute('x1',a.x); ln.setAttribute('y1',a.y);
+        ln.setAttribute('x2',b.x); ln.setAttribute('y2',b.y);
+        ln.setAttribute('stroke','#c8a96e');
+        ln.setAttribute('stroke-width','1.0');
+        ln.setAttribute('opacity','0.45');
+        svg.appendChild(ln);
+      }
+    }
+
+    function drawNodes(nodes) {
+      nodes.forEach(n => {
+        const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('cx',n.x); dot.setAttribute('cy',n.y); dot.setAttribute('r','2.8');
+        dot.setAttribute('fill','#c8a96e'); dot.setAttribute('opacity',rand(0.55,0.95).toFixed(2));
+        svg.appendChild(dot);
+
+        // Pulsing ring on every node
+        const ring=document.createElementNS('http://www.w3.org/2000/svg','circle');
+        ring.setAttribute('cx',n.x); ring.setAttribute('cy',n.y);
+        ring.setAttribute('fill','none'); ring.setAttribute('stroke','#c8a96e');
+        ring.setAttribute('stroke-width','0.6'); ring.setAttribute('opacity','0');
+        const delay=rand(0,6).toFixed(2), dur=rand(2.5,5).toFixed(2);
+        ['opacity','r'].forEach((attr,i) => {
+          const a=document.createElementNS('http://www.w3.org/2000/svg','animate');
+          a.setAttribute('attributeName',attr);
+          a.setAttribute('values',i===0?'0;0.55;0':'3;10;3');
+          a.setAttribute('dur',dur+'s'); a.setAttribute('begin',delay+'s');
+          a.setAttribute('repeatCount','indefinite');
+          ring.appendChild(a);
+        });
+        svg.appendChild(ring);
+      });
+    }
+
+    function drawBridges(fromNodes, toNodes, count, opacity) {
+      const sf=[...fromNodes].sort((a,b)=>a.y-b.y).slice(0,count);
+      const st=[...toNodes].sort((a,b)=>a.y-b.y).slice(0,count);
+      for (let i=0;i<count;i++) {
+        const a=sf[i%sf.length], b=st[i%st.length];
+        const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+        ln.setAttribute('x1',a.x); ln.setAttribute('y1',a.y);
+        ln.setAttribute('x2',b.x); ln.setAttribute('y2',b.y);
+        ln.setAttribute('stroke','#c8a96e'); ln.setAttribute('stroke-width','0.55');
+        ln.setAttribute('opacity',opacity); ln.setAttribute('stroke-dasharray','4 8');
+        svg.appendChild(ln);
+      }
+    }
+
+    drawOutline(usaNodes); drawNodes(usaNodes);
+
+    // China: pixel-perfect from cn-01.png.
+    // Canvas converts white→transparent, black→gold.
+    // Border pixels are sampled for node animation so dots follow the real outline.
+    const chinaImg = document.createElementNS('http://www.w3.org/2000/svg','image');
+    chinaImg.setAttribute('x', defs.china.x0);
+    chinaImg.setAttribute('y', defs.china.y0);
+    chinaImg.setAttribute('width',  defs.china.x1 - defs.china.x0);
+    chinaImg.setAttribute('height', defs.china.y1 - defs.china.y0);
+    chinaImg.setAttribute('preserveAspectRatio','none');
+    chinaImg.setAttribute('opacity','0.65');
+    svg.appendChild(chinaImg);
+
+    // chnAnimNodes will hold border-sampled points; start with coord fallback
+    let chnAnimNodes = chnNodes;
+
+    const srcImg = new Image();
+    srcImg.crossOrigin = 'anonymous';
+    srcImg.onload = () => {
+      // Use FULL original resolution — preserves every sharp edge detail
+      const W = srcImg.naturalWidth, H = srcImg.naturalHeight;
+      const cvs = document.createElement('canvas');
+      cvs.width = W; cvs.height = H;
+      const ctx = cvs.getContext('2d');
+      ctx.drawImage(srcImg, 0, 0, W, H);
+      try {
+        const id = ctx.getImageData(0, 0, W, H);
+        const d = id.data;
+        const mask = new Uint8Array(W * H);
+
+        // Colorise dark pixels to gold and build binary mask
+        for (let i = 0; i < d.length; i += 4) {
+          const lum = d[i]*0.299 + d[i+1]*0.587 + d[i+2]*0.114;
+          if (lum < 140) {
+            d[i]=200; d[i+1]=169; d[i+2]=110;
+            d[i+3] = Math.min(255, Math.round((1-lum/255)*280));
+            mask[i >> 2] = 1;
+          } else {
+            d[i+3] = 0;
+          }
+        }
+        ctx.putImageData(id, 0, 0);
+        chinaImg.setAttribute('href', cvs.toDataURL());
+
+        // Moore's neighbor contour tracing — walks border pixels in polygon order
+        // so drawOutline produces the real jagged China shape, not random zigzags
+        let sx = -1, sy = -1;
+        outer: for (let y = 0; y < H; y++)
+          for (let x = 0; x < W; x++)
+            if (mask[y*W+x]) { sx=x; sy=y; break outer; }
+
+        if (sx >= 0) {
+          // 8 directions clockwise: N NE E SE S SW W NW
+          const DX=[0,1,1,1,0,-1,-1,-1], DY=[-1,-1,0,1,1,1,0,-1];
+          let cx=sx, cy=sy, pDir=6; // pDir=6 (W): start as if came from west
+          const chain=[];
+
+          for (let lim=W*H; lim>0; lim--) {
+            chain.push([cx, cy]);
+            const back=(pDir+4)%8;
+            let moved=false;
+            for (let di=1; di<=8; di++) {
+              const nd=(back+di)%8;
+              const nx=cx+DX[nd], ny=cy+DY[nd];
+              if (nx>=0 && nx<W && ny>=0 && ny<H && mask[ny*W+nx]) {
+                cx=nx; cy=ny; pDir=nd; moved=true; break;
+              }
+            }
+            if (!moved || (chain.length > 20 && cx===sx && cy===sy)) break;
+          }
+
+          // Downsample to ~320 evenly-spaced polygon points
+          const N=320, step=Math.max(1, Math.floor(chain.length/N));
+          chnAnimNodes = chain
+            .filter((_,i) => i%step===0)
+            .map(([px,py]) => ({
+              x: defs.china.x0 + (px/W)*(defs.china.x1-defs.china.x0),
+              y: defs.china.y0 + (py/H)*(defs.china.y1-defs.china.y0)
+            }));
+
+          drawOutline(chnAnimNodes);
+          drawNodes(chnAnimNodes);
+        }
+      } catch(e) {
+        // Canvas tainted (file:// protocol) — fallback to coordinate outline
+        drawOutline(chnNodes); drawNodes(chnNodes);
+      }
+    };
+    // Draw coordinate polygon immediately as visible baseline
+    drawOutline(chnNodes); drawNodes(chnNodes);
+
+    srcImg.onerror = () => { /* coordinate outline already drawn above */ };
+    srcImg.src = 'cn-02.png';
+    if (srcImg.complete && srcImg.naturalWidth) srcImg.onload();
+
+    drawOutline(ausNodes); drawNodes(ausNodes);
+    drawOutline(tasNodes); drawNodes(tasNodes);
+    drawOutline(hkNodes);  drawNodes(hkNodes);
+
+    // City hub markers — red pulsing dots with labels
+    const chnHubs = [
+      {label:'SH', nx:0.848, ny:0.604},
+      {label:'BJ', nx:0.740, ny:0.398},
+      {label:'GZ', nx:0.730, ny:0.842},
+      {label:'HK', nx:0.745, ny:0.884},
+      {label:'SZ', nx:0.747, ny:0.859},
+    ];
+    const chnHubNodes = chnHubs.map(h => ({
+      label: h.label,
+      x: defs.china.x0 + h.nx*(defs.china.x1-defs.china.x0),
+      y: defs.china.y0 + h.ny*(defs.china.y1-defs.china.y0),
+    }));
+    chnHubNodes.forEach(h => {
+      // Outer pulse ring
+      const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',h.x); ring.setAttribute('cy',h.y);
+      ring.setAttribute('fill','none'); ring.setAttribute('stroke','#d4163c');
+      ring.setAttribute('stroke-width','0.8'); ring.setAttribute('opacity','0');
+      const delay = rand(0,4).toFixed(2);
+      ['opacity','r'].forEach((attr,i) => {
+        const a = document.createElementNS('http://www.w3.org/2000/svg','animate');
+        a.setAttribute('attributeName', attr);
+        a.setAttribute('values', i===0 ? '0;0.7;0' : '3;12;3');
+        a.setAttribute('dur','2.8s'); a.setAttribute('begin', delay+'s');
+        a.setAttribute('repeatCount','indefinite');
+        ring.appendChild(a);
+      });
+      svg.appendChild(ring);
+
+      // Core dot
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',h.x); dot.setAttribute('cy',h.y); dot.setAttribute('r','5.6');
+      dot.setAttribute('fill','#d4163c'); dot.setAttribute('opacity','0.90');
+      svg.appendChild(dot);
+    });
+
+    // Australia hub markers
+    const ausHubs = [
+      {label:'SYD', nx:0.883, ny:0.588},
+      {label:'CAN', nx:0.818, ny:0.617},
+      {label:'MEL', nx:0.751, ny:0.684},
+      {label:'BRI', nx:0.922, ny:0.414},
+      {label:'PER', nx:0.153, ny:0.604},
+    ];
+    const ausHubNodes = ausHubs.map(h => ({
+      label: h.label,
+      x: defs.australia.x0 + h.nx*(defs.australia.x1-defs.australia.x0),
+      y: defs.australia.y0 + h.ny*(defs.australia.y1-defs.australia.y0),
+    }));
+    ausHubNodes.forEach(h => {
+      const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',h.x); ring.setAttribute('cy',h.y);
+      ring.setAttribute('fill','none'); ring.setAttribute('stroke','#d4163c');
+      ring.setAttribute('stroke-width','0.8'); ring.setAttribute('opacity','0');
+      const delay = rand(0,4).toFixed(2);
+      ['opacity','r'].forEach((attr,i) => {
+        const a = document.createElementNS('http://www.w3.org/2000/svg','animate');
+        a.setAttribute('attributeName', attr);
+        a.setAttribute('values', i===0 ? '0;0.7;0' : '3;12;3');
+        a.setAttribute('dur','2.8s'); a.setAttribute('begin', delay+'s');
+        a.setAttribute('repeatCount','indefinite');
+        ring.appendChild(a);
+      });
+      svg.appendChild(ring);
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',h.x); dot.setAttribute('cy',h.y); dot.setAttribute('r','5.6');
+      dot.setAttribute('fill','#d4163c'); dot.setAttribute('opacity','0.90');
+      svg.appendChild(dot);
+    });
+
+    // USA hub markers
+    const usaHubs = [
+      {label:'NY',  nx:0.823, ny:0.392},
+      {label:'CHI', nx:0.630, ny:0.398},
+      {label:'SF',  nx:0.111, ny:0.434},
+      {label:'LA',  nx:0.165, ny:0.595},
+      {label:'BOS', nx:0.861, ny:0.338},
+      {label:'HOU', nx:0.505, ny:0.779},
+      {label:'SEA', nx:0.169, ny:0.155},
+      {label:'DAL', nx:0.488, ny:0.678},
+      {label:'MIA', nx:0.783, ny:0.837},
+    ];
+    const usaHubNodes = usaHubs.map(h => ({
+      label: h.label,
+      x: defs.usa.x0 + h.nx*(defs.usa.x1-defs.usa.x0),
+      y: defs.usa.y0 + h.ny*(defs.usa.y1-defs.usa.y0),
+    }));
+    usaHubNodes.forEach(h => {
+      const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',h.x); ring.setAttribute('cy',h.y);
+      ring.setAttribute('fill','none'); ring.setAttribute('stroke','#d4163c');
+      ring.setAttribute('stroke-width','0.8'); ring.setAttribute('opacity','0');
+      const delay = rand(0,4).toFixed(2);
+      ['opacity','r'].forEach((attr,i) => {
+        const a = document.createElementNS('http://www.w3.org/2000/svg','animate');
+        a.setAttribute('attributeName', attr);
+        a.setAttribute('values', i===0 ? '0;0.7;0' : '3;12;3');
+        a.setAttribute('dur','2.8s'); a.setAttribute('begin', delay+'s');
+        a.setAttribute('repeatCount','indefinite');
+        ring.appendChild(a);
+      });
+      svg.appendChild(ring);
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',h.x); dot.setAttribute('cy',h.y); dot.setAttribute('r','5.6');
+      dot.setAttribute('fill','#d4163c'); dot.setAttribute('opacity','0.90');
+      svg.appendChild(dot);
+    });
+
+    // Hub-to-hub connection lines: China → USA
+    function hubLine(from, to, opacity='0.12') {
+      const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+      ln.setAttribute('x1',from.x); ln.setAttribute('y1',from.y);
+      ln.setAttribute('x2',to.x);   ln.setAttribute('y2',to.y);
+      ln.setAttribute('stroke','#c8a96e'); ln.setAttribute('stroke-width','0.6');
+      ln.setAttribute('opacity',opacity); ln.setAttribute('stroke-dasharray','4 8');
+      svg.appendChild(ln);
+    }
+    const chnH = {}, usaH = {};
+    chnHubNodes.forEach(h => chnH[h.label] = h);
+    usaHubNodes.forEach(h => usaH[h.label] = h);
+
+    // BJ → USA cities
+    ['SEA','SF','CHI','NY','BOS','MIA','DAL','HOU'].forEach(c => hubLine(chnH['BJ'], usaH[c]));
+    // SH → USA cities
+    ['SEA','SF','CHI','NY','BOS'].forEach(c => hubLine(chnH['SH'], usaH[c]));
+
+    // Hub-to-hub: every China hub → every Australia hub
+    chnHubNodes.forEach(c => ausHubNodes.forEach(a => hubLine(c, a)));
+
+    // Travelling signal dots — spawn multiple per tick for density
+    const allSegs=[];
+    // USA and Australia use coordinate segments; China uses sampled border segments
+    [usaNodes,ausNodes,tasNodes,hkNodes].forEach(nodes=>{
+      for(let i=0;i<nodes.length-1;i++) allSegs.push([nodes[i],nodes[i+1]]);
+    });
+    // China segments added after image loads (chnAnimNodes may be updated)
+    function addChinaSegs() {
+      for(let i=0;i<chnAnimNodes.length-1;i++) allSegs.push([chnAnimNodes[i],chnAnimNodes[i+1]]);
+    }
+    setTimeout(addChinaSegs, 800); // give image time to load
+
+    function pulse() {
+      // Spawn 3 dots per tick
+      for (let k=0; k<3; k++) {
+        const [from,to]=allSegs[Math.floor(Math.random()*allSegs.length)];
+        const dur = (0.9+Math.random()*0.8).toFixed(2);
+        const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
+        dot.setAttribute('r','2.2'); dot.setAttribute('fill','#f0e0b0'); dot.setAttribute('opacity','0');
+        [['cx',from.x,to.x],['cy',from.y,to.y]].forEach(([attr,f,t])=>{
+          const a=document.createElementNS('http://www.w3.org/2000/svg','animate');
+          a.setAttribute('attributeName',attr); a.setAttribute('values',`${f};${t}`);
+          a.setAttribute('dur',dur+'s'); a.setAttribute('fill','freeze'); dot.appendChild(a);
+        });
+        const aOp=document.createElementNS('http://www.w3.org/2000/svg','animate');
+        aOp.setAttribute('attributeName','opacity'); aOp.setAttribute('values','0;1;0');
+        aOp.setAttribute('dur',dur+'s'); aOp.setAttribute('fill','freeze'); dot.appendChild(aOp);
+        svg.appendChild(dot);
+        setTimeout(()=>dot.remove(), parseFloat(dur)*1000+100);
+      }
+    }
+    setInterval(pulse, 220);
+  })();
+
+  // ── Floating firm badges ──
+  const firms = [
+    'Goldman Sachs','Morgan Stanley','JP Morgan','Macquarie','UBS',
+    'Deutsche Bank','Nomura','Citi','Bank of America','Gresham',
+    'KPMG','PwC','EY','Accenture','BDO','Grant Thornton',
+    'Westpac','ANZ','CBA','NAB','HSBC',
+    'AustralianSuper','AIA','TAL',
+    'Microsoft','Amazon','Salesforce','Canva','Atlassian',
+    'Unilever','L\'Oréal','Nestlé','RBA'
+  ];
+
+  const container = document.getElementById('heroFloats');
+  const MAX_PER_SIDE = 6;
+  let counts = { left: 0, right: 0 };
+  let firmIndex = 0;
+
+  function spawnBadge() {
+    // Pick whichever side has room; if both full, skip
+    const leftFull  = counts.left  >= MAX_PER_SIDE;
+    const rightFull = counts.right >= MAX_PER_SIDE;
+    if (leftFull && rightFull) return;
+
+    // Choose a side that has room, with a random preference
+    let inLeftZone;
+    if (leftFull)       inLeftZone = false;
+    else if (rightFull) inLeftZone = true;
+    else                inLeftZone = Math.random() < 0.5;
+
+    const side = inLeftZone ? 'left' : 'right';
+    const xPct = inLeftZone
+      ? Math.random() * 16        // 0–16%
+      : 84 + Math.random() * 14;  // 84–98%
+
+    const yPct  = 55 + Math.random() * 40;
+    const dur   = 11 + Math.random() * 10;
+    const drift = (Math.random() - 0.5) * 40;
+
+    const badge = document.createElement('span');
+    badge.className = 'float-badge';
+    badge.textContent = firms[Math.floor(Math.random() * firms.length)];
+    badge.style.left = xPct + '%';
+    badge.style.top  = yPct + '%';
+    badge.style.animationDuration = dur + 's';
+    badge.style.animationDelay = '0s';
+    badge.style.setProperty('--drift', drift + 'px');
+
+    counts[side]++;
+    container.appendChild(badge);
+
+    setTimeout(() => {
+      badge.remove();
+      counts[side]--;
+    }, dur * 1000);
+  }
+
+  // Stagger initial spawns then keep a steady cadence
+  firms.forEach((_, i) => setTimeout(spawnBadge, i * 600));
+  setInterval(spawnBadge, 600);
+
+  // ── Image fallback ──
+  const fallbacks = [
+    'https://picsum.photos/seed/sydney/520/320',
+    'https://picsum.photos/seed/melbourne/520/320',
+    'https://picsum.photos/seed/newyork/520/320',
+    'https://picsum.photos/seed/chicago/520/320',
+    'https://picsum.photos/seed/sanfrancisco/520/320',
+    'https://picsum.photos/seed/losangeles/520/320',
+    'https://picsum.photos/seed/seattle/520/320',
+    'https://picsum.photos/seed/brisbane/520/320',
+  ];
+  document.querySelectorAll('.city-tile img').forEach((img, i) => {
+    img.onerror = function() {
+      this.onerror = null;
+      this.src = fallbacks[i % fallbacks.length];
+    };
+  });
+
+  // Threading effect: inject a gold slot at each ring's top border-crossing
+  // so the card border appears to sit on top of the ring at that point.
+  function setupSpineSlots() {
+    document.querySelectorAll('.why-card').forEach(card => {
+      card.querySelectorAll('.why-ring').forEach(ring => {
+        const cardRect = card.getBoundingClientRect();
+        const ringRect = ring.getBoundingClientRect();
+        const ringCenterY = (ringRect.top + ringRect.bottom) / 2 - cardRect.top;
+        // Top crossing is ~8px above ring centre (from ellipse geometry at 100° rotation)
+        const slotTop = ringCenterY - 8 - 5 + 3; // centre the 10px slot on the crossing
+        const slot = document.createElement('div');
+        slot.className = 'why-spine-slot';
+        slot.style.top = slotTop + 'px';
+        card.appendChild(slot);
+      });
+    });
+  }
+  window.addEventListener('load', setupSpineSlots);
+
+  // Golden wave decorations for services section — Art Deco fan with end flare
+  // (Replaced by CSS baroque ornament image — preserved here to restore if needed)
+  /* window.addEventListener('load', function buildServiceWaves() {
+    // Each line: flares out at top/bottom, pinches near spine at 15%/85%, bows out at midpoint
+    const strokes = [
+      [0.04, 3.8, 0.90],
+      [0.10, 3.0, 0.85],
+      [0.18, 2.2, 0.80],
+      [0.27, 1.6, 0.75],
+      [0.37, 1.1, 0.70],
+      [0.48, 0.75, 0.65],
+      [0.60, 0.55, 0.58],
+      [0.73, 0.42, 0.52],
+      [0.87, 0.33, 0.45],
+      [1.02, 0.28, 0.38],
+      [1.18, 0.24, 0.32],
+      [1.35, 0.20, 0.26],
+      [1.54, 0.18, 0.20],
+    ];
+
+    [false, true].forEach(mirror => {
+      const svg = document.getElementById(mirror ? 'svc-wave-right' : 'svc-wave-left');
+      if (!svg) return;
+      const spine = mirror ? 8 : 92;
+      const dir   = mirror ? 1 : -1;
+
+      strokes.forEach(([s, sw, so]) => {
+        const tx  = (spine + dir * s * 68).toFixed(1);  // flared end x (top & bottom)
+        const mx  = (spine + dir * s * 112).toFixed(1); // max bow at midpoint
+        const cp1 = (spine + dir * s * 10).toFixed(1);  // tight to spine at 15% — the pinch
+        const cp2 = (spine + dir * s * 106).toFixed(1); // pulling toward max bow
+
+        const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        p.setAttribute('fill', 'none');
+        p.setAttribute('stroke', '#c8a96e');
+        p.setAttribute('stroke-width', sw);
+        p.setAttribute('stroke-opacity', so);
+        p.setAttribute('stroke-linecap', 'round');
+        // Two cubic bezier segments: top-flare → pinch → mid-bow → pinch → bottom-flare
+        p.setAttribute('d',
+          `M ${tx},-2 C ${cp1},15 ${cp2},40 ${mx},50 C ${cp2},60 ${cp1},85 ${tx},102`);
+        svg.appendChild(p);
+      });
+    });
+  }); */
+
+  // Testimonials carousel
+  (function() {
+    const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+    let current = 0;
+
+    function update() {
+      cards.forEach((card, i) => {
+        const offset = (i - current + cards.length) % cards.length;
+        if (offset === 0) card.setAttribute('data-pos', 'active');
+        else if (offset === 1) card.setAttribute('data-pos', 'next');
+        else if (offset === cards.length - 1) card.setAttribute('data-pos', 'prev');
+        else card.removeAttribute('data-pos');
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    document.getElementById('testimonial-next').addEventListener('click', function() {
+      current = (current + 1) % cards.length;
+      update();
+    });
+    document.getElementById('testimonial-prev').addEventListener('click', function() {
+      current = (current - 1 + cards.length) % cards.length;
+      update();
+    });
+
+    update();
+  })();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
