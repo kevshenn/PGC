@@ -1016,7 +1016,7 @@
       opacity: 0.35;
       object-fit: cover;
       object-position: 72% center;
-      transform: scale(1.341) translateY(40px) translateX(-40px);
+      transform: scale(1.341) translateY(3.5vh) translateX(-2vw);
       transform-origin: center center;
       filter: contrast(1.3) brightness(0.95);
     }
@@ -3249,8 +3249,9 @@
 
 <script>
   // ── Country synapse outlines ──
-  (function() {
+  function buildSynapse() {
     const container = document.getElementById('synapseContainer');
+    container.innerHTML = ''; // clear on rebuild
     const W = window.innerWidth, H = window.innerHeight;
     const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
     svg.setAttribute('width','100%'); svg.setAttribute('height','100%');
@@ -3731,7 +3732,14 @@
       }
     }
     setInterval(pulse, 220);
-  })();
+  }
+
+  buildSynapse();
+  let _synapseResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(_synapseResizeTimer);
+    _synapseResizeTimer = setTimeout(buildSynapse, 200);
+  });
 
   // ── Floating firm badges ──
   const firms = [
