@@ -1738,6 +1738,99 @@
       border-color: var(--accent);
     }
 
+    /* ── FAQ ── */
+    .faq-section {
+      background: #080c24;
+      padding: 100px 48px;
+      position: relative;
+      overflow: hidden;
+      display: block;
+    }
+    .faq-section > .section-inner { position: relative; z-index: 2; }
+    .faq-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(200,169,110,0.06) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(212,22,60,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .faq-section .section-eyebrow { color: var(--accent); }
+    .faq-section .section-title { color: var(--white); }
+    .faq-section .section-subtitle { color: rgba(255,255,255,0.6); }
+    .faq-grid {
+      max-width: 820px;
+      margin: 52px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      border: 1px solid rgba(200,169,110,0.15);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item.open {
+      border-color: rgba(200,169,110,0.35);
+      background: rgba(255,255,255,0.05);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      transition: color 0.2s;
+    }
+    .faq-item.open .faq-question { color: var(--accent); }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(200,169,110,0.3);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.3s, border-color 0.2s, background 0.2s;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+      border-color: var(--accent);
+      background: rgba(200,169,110,0.1);
+    }
+    .faq-chevron svg { stroke: var(--accent); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 28px;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0 28px 22px;
+    }
+    .faq-answer p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.65);
+      border-top: 1px solid rgba(200,169,110,0.1);
+      padding-top: 18px;
+    }
+    @media (max-width: 768px) {
+      .faq-section { padding: 72px 24px; }
+      .faq-question { font-size: 14px; padding: 18px 20px; }
+      .faq-answer { padding: 0 20px; }
+      .faq-item.open .faq-answer { padding: 0 20px 18px; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: #050810;
@@ -3018,6 +3111,83 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-inner">
+    <div class="section-eyebrow">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+    <p class="section-subtitle">Everything you need to know before booking your free consultation.</p>
+
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How much does it cost?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>We don't publish our pricing publicly — our programmes are tailored to each client's background, goals, and the level of support required. Pricing is discussed transparently during your free consultation, with no obligation to proceed. We offer a range of engagement structures to suit different needs and timelines.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Am I eligible if I'm not based in Australia or the US?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Yes. We work with students and graduates regardless of where they're currently located. All of our sessions are conducted remotely via video or phone call, so geography is no barrier. Our focus is on preparing you to compete for roles in Australia and the United States — wherever you're based right now.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does the programme typically run?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>It depends on where you're starting from and how far away the next recruitment cycle is. Engagements typically run anywhere from 6 weeks to 6 months. Some students work with us intensively in the lead-up to applications and interviews; others prefer a longer-term structured approach starting a year out. We'll recommend what makes sense for your situation during the initial consultation.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if I don't end up receiving an offer?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Finance recruitment is competitive and we can't guarantee outcomes — no honest consultancy can. What we can guarantee is that you'll be significantly better prepared than you would be going it alone. In cases where a client doesn't land their target role in a given cycle, we continue to support them through the next round. We're invested in your outcome, not just your enrolment.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this only for investment banking roles?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>No. While our consultants have deep expertise in investment banking, we also work with clients targeting Big 4 accounting, asset management, corporate finance, global markets, private equity, and other competitive finance roles across Australia and the US. During the consultation we'll assess your goals and be honest about where our expertise is most relevant to your situation.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How is PGC different from my university's careers centre?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>University careers centres provide general guidance across all industries and all students. Our consultants are active finance professionals who have personally landed roles at the firms you're targeting — and in many cases have been directly involved in hiring at those firms. Every piece of advice is specific, current, and based on real experience inside the recruitment process you're about to go through.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need to be a Chinese international student to work with you?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Not at all. While our consultants have a particular understanding of the challenges faced by students of Chinese background navigating Western finance markets, we work with any motivated student or graduate who is serious about breaking into competitive finance roles in Australia or the US. The quality of our guidance is what matters — not your background.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I get started?
+          <span class="faq-chevron"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-answer"><p>Book a free 30-minute consultation using the button below. Tell us about your background and goals, and one of our consultants will be in touch within 24 hours to confirm a time. There's no commitment and no cost — just an honest conversation about where you stand and how we can help.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-content">
@@ -3640,6 +3810,16 @@
     });
   }
   window.addEventListener('load', setupSpineSlots);
+
+  // ── FAQ accordion ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    // Open clicked if it was closed
+    if (!isOpen) item.classList.add('open');
+  }
 
   // Golden wave decorations for services section — Art Deco fan with end flare
   // (Replaced by CSS baroque ornament image — preserved here to restore if needed)

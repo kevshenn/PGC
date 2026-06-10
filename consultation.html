@@ -340,6 +340,35 @@
     .avail-slot-time { font-size: 9.5px; font-weight: 400; color: var(--gray-400); }
     .avail-slot label:has(input:checked) .avail-slot-time { color: var(--accent-dark); opacity: 0.7; }
 
+    /* ── SUCCESS STATE ── */
+    .success-banner {
+      display: none;
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid rgba(200,169,110,0.3);
+      padding: 60px 48px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .success-banner.visible { display: block; }
+    .success-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(200,169,110,0.15), rgba(200,169,110,0.05));
+      border: 2px solid rgba(200,169,110,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .success-banner h3 {
+      font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 12px;
+    }
+    .success-banner p {
+      font-size: 15px; color: var(--gray-600); line-height: 1.7; max-width: 480px; margin: 0 auto;
+    }
+    .success-banner .cn {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 13px; color: var(--gray-400); margin-top: 10px;
+    }
+
     /* ── SUBMIT ── */
     .submit-section { text-align: center; margin-top: 12px; }
     .submit-btn {
@@ -405,12 +434,12 @@
       <div class="field-row">
         <div class="field">
           <label>Full Name <span class="required">*</span></label>
-          <input type="text" name="name" required />
+          <input type="text" name="01. Full Name" required />
           <span class="field-error-msg">Please enter your full name.</span>
         </div>
         <div class="field">
           <label>Age <span class="required">*</span></label>
-          <input type="number" name="age" min="16" max="40" required />
+          <input type="number" name="02. Age" min="16" max="40" required />
           <span class="field-error-msg">Please enter your age.</span>
         </div>
       </div>
@@ -418,12 +447,12 @@
       <div class="field-row">
         <div class="field">
           <label>Email Address <span class="required">*</span></label>
-          <input type="email" name="email" required />
+          <input type="email" name="03. Email Address" required />
           <span class="field-error-msg">Please enter a valid email address.</span>
         </div>
         <div class="field">
           <label>Mobile Number <span class="required">*</span></label>
-          <input type="tel" name="mobile" required />
+          <input type="tel" name="04. Mobile Number" required />
           <span class="field-error-msg">Please enter your mobile number.</span>
         </div>
       </div>
@@ -432,18 +461,18 @@
         <div class="field">
           <label>Preferred Contact Method <span class="required">*</span></label>
           <div class="chip-group" id="contactMethodGroup">
-            <label class="chip-label"><input type="radio" name="contactMethod" value="Email" /> Email</label>
-            <label class="chip-label"><input type="radio" name="contactMethod" value="SMS" /> SMS</label>
-            <label class="chip-label"><input type="radio" name="contactMethod" value="WhatsApp" /> WhatsApp</label>
-            <label class="chip-label"><input type="radio" name="contactMethod" value="WeChat" /> WeChat · 微信</label>
+            <label class="chip-label"><input type="radio" name="05. Preferred Contact Method" value="Email" /> Email</label>
+            <label class="chip-label"><input type="radio" name="05. Preferred Contact Method" value="SMS" /> SMS</label>
+            <label class="chip-label"><input type="radio" name="05. Preferred Contact Method" value="WhatsApp" /> WhatsApp</label>
+            <label class="chip-label"><input type="radio" name="05. Preferred Contact Method" value="WeChat" /> WeChat · 微信</label>
           </div>
           <span class="group-error-msg" id="contactMethodError">Please select a preferred contact method.</span>
         </div>
         <div class="field">
           <label>Preferred Consultation Call <span class="required">*</span></label>
           <div class="chip-group" id="consultCallGroup">
-            <label class="chip-label"><input type="radio" name="consultCall" value="Mobile" /> Mobile Call</label>
-            <label class="chip-label"><input type="radio" name="consultCall" value="Virtual" /> Virtual (Zoom / Teams)</label>
+            <label class="chip-label"><input type="radio" name="06. Preferred Consultation Format" value="Mobile" /> Mobile Call</label>
+            <label class="chip-label"><input type="radio" name="06. Preferred Consultation Format" value="Virtual" /> Virtual (Zoom / Teams)</label>
           </div>
           <span class="group-error-msg" id="consultCallError">Please select your preferred consultation format.</span>
         </div>
@@ -460,12 +489,12 @@
       <div class="field-row">
         <div class="field">
           <label>University <span class="required">*</span></label>
-          <input type="text" name="university" required />
+          <input type="text" name="07. University" required />
           <span class="field-error-msg">Please enter your university.</span>
         </div>
         <div class="field">
           <label>Degree <span class="required">*</span></label>
-          <input type="text" name="degree" required />
+          <input type="text" name="08. Degree" required />
           <span class="field-error-msg">Please enter your degree.</span>
         </div>
       </div>
@@ -473,11 +502,11 @@
       <div class="field-row">
         <div class="field">
           <label>Major <span class="optional">Optional</span></label>
-          <input type="text" name="major" />
+          <input type="text" name="09. Major" />
         </div>
         <div class="field">
           <label>WAM / GPA <span class="optional">Optional</span></label>
-          <input type="text" name="wam" />
+          <input type="text" name="10. WAM / GPA" />
         </div>
       </div>
 
@@ -488,7 +517,7 @@
             <button type="button" class="toggle-btn" id="gradNo" onclick="setGrad(false)">Currently studying</button>
             <button type="button" class="toggle-btn" id="gradYes" onclick="setGrad(true)">✓ &nbsp;Yes, I have graduated</button>
           </div>
-          <input type="hidden" name="graduated" id="graduatedVal" />
+          <input type="hidden" name="11. Graduated" id="graduatedVal" />
           <span class="group-error-msg" id="graduatedError">Please indicate whether you have graduated.</span>
         </div>
       </div>
@@ -497,9 +526,9 @@
         <div class="field">
           <label>What year of university are you in? <span class="required">*</span></label>
           <div class="chip-group" id="uniYearGroup">
-            <label class="chip-label"><input type="radio" name="uniYear" value="Pre-Penultimate" /> Pre-Penultimate Year</label>
-            <label class="chip-label"><input type="radio" name="uniYear" value="Penultimate" /> Penultimate Year</label>
-            <label class="chip-label"><input type="radio" name="uniYear" value="Final" /> Final Year</label>
+            <label class="chip-label"><input type="radio" name="12. Year of Study" value="Pre-Penultimate" /> Pre-Penultimate Year</label>
+            <label class="chip-label"><input type="radio" name="12. Year of Study" value="Penultimate" /> Penultimate Year</label>
+            <label class="chip-label"><input type="radio" name="12. Year of Study" value="Final" /> Final Year</label>
           </div>
           <span class="group-error-msg" id="uniYearError">Please select your year of study.</span>
         </div>
@@ -517,7 +546,7 @@
         <div class="field">
           <label>Current Career Situation <span class="required">*</span></label>
           <p class="field-hint">Tell us as much as you can — any internships or work experience, extracurriculars, finance-related activities, and where you feel your profile currently stands. The more detail you give us, the more useful your consultation will be. It's completely fine if you're just starting out or unsure where to begin.</p>
-          <textarea name="currentSituation" rows="10" required></textarea>
+          <textarea name="13. Current Career Situation" rows="10" required></textarea>
           <span class="field-error-msg">Please describe your current career situation.</span>
         </div>
       </div>
@@ -526,7 +555,7 @@
         <div class="field">
           <label>Short-Term Career Goal <span class="required">*</span><span class="optional">— next 1–2 years</span></label>
           <p class="field-hint">What role or outcome are you hoping to achieve in the near term? Include specific firms, divisions, or locations if you have them in mind. Don't worry if you're still exploring — just share what's appealing to you right now and why.</p>
-          <textarea name="goalShort" rows="6" required></textarea>
+          <textarea name="14. Short-Term Career Goal" rows="6" required></textarea>
           <span class="field-error-msg">Please describe your short-term career goal.</span>
         </div>
       </div>
@@ -535,7 +564,7 @@
         <div class="field">
           <label>Long-Term Career Goal <span class="required">*</span><span class="optional">— 3–10 years out</span></label>
           <p class="field-hint">Where do you see yourself further down the track? This could be a specific role, industry, or location — or simply a direction you find exciting. It's absolutely fine if this is still open or evolving.</p>
-          <textarea name="goalLong" rows="6" required></textarea>
+          <textarea name="15. Long-Term Career Goal" rows="6" required></textarea>
           <span class="field-error-msg">Please describe your long-term career goal.</span>
         </div>
       </div>
@@ -549,7 +578,7 @@
       </div>
 
       <div class="upload-zone" id="uploadZone">
-        <input type="file" name="cv" id="cvInput" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)" />
+        <input type="file" name="16. CV Upload" id="cvInput" accept=".pdf,.doc,.docx" onchange="handleFileSelect(this)" />
         <div class="upload-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </div>
@@ -584,6 +613,16 @@
         Your information is kept strictly confidential and never shared with third parties.<br/>
         <span style="font-family:'Noto Sans SC',sans-serif;">您的信息将被严格保密，绝不与第三方共享。</span>
       </div>
+    </div>
+
+    <!-- SUCCESS BANNER (shown after submission) -->
+    <div class="success-banner" id="successBanner">
+      <div class="success-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>We've received your request!</h3>
+      <p>One of our consultants will be in touch within 24 hours to confirm your free consultation. We look forward to speaking with you.</p>
+      <div class="cn">我们已收到您的申请，顾问将在24小时内与您联系。</div>
     </div>
 
   </form>
@@ -708,7 +747,7 @@
       const slotsHtml = slots.map(s => `
         <div class="avail-slot">
           <label ${isPast ? 'style="pointer-events:none;"' : ''}>
-            <input type="checkbox" name="avail_${days[i].toLowerCase()}_${s.key}" value="${s.key}" ${isPast ? 'disabled' : ''} />
+            <input type="checkbox" name="17. Availability - ${days[i]} ${s.label}" value="${s.label}" ${isPast ? 'disabled' : ''} />
             ${s.label}
             <span class="avail-slot-time">${s.time}</span>
           </label>
@@ -770,16 +809,16 @@
     }
 
     // — Personal Details —
-    validateInput('name');
-    validateInput('age', v => v !== '' && !isNaN(v) && Number(v) >= 16 && Number(v) <= 40);
-    validateInput('email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-    validateInput('mobile');
-    validateRadio('contactMethod', 'contactMethodError');
-    validateRadio('consultCall', 'consultCallError');
+    validateInput('01. Full Name');
+    validateInput('02. Age', v => v !== '' && !isNaN(v) && Number(v) >= 16 && Number(v) <= 40);
+    validateInput('03. Email Address', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    validateInput('04. Mobile Number');
+    validateRadio('05. Preferred Contact Method', 'contactMethodError');
+    validateRadio('06. Preferred Consultation Format', 'consultCallError');
 
     // — Academic Stage —
-    validateInput('university');
-    validateInput('degree');
+    validateInput('07. University');
+    validateInput('08. Degree');
 
     // Graduated toggle
     const gradVal = document.getElementById('graduatedVal').value;
@@ -797,13 +836,13 @@
 
     // Uni year — only required if not graduated
     if (gradVal === 'No') {
-      validateRadio('uniYear', 'uniYearError');
+      validateRadio('12. Year of Study', 'uniYearError');
     }
 
     // — Career Profile —
-    validateTextarea('currentSituation');
-    validateTextarea('goalShort');
-    validateTextarea('goalLong');
+    validateTextarea('13. Current Career Situation');
+    validateTextarea('14. Short-Term Career Goal');
+    validateTextarea('15. Long-Term Career Goal');
 
     // — Availability —
     const slotsChecked = document.querySelectorAll('#timeslotGroup input[type="checkbox"]:checked');
@@ -826,7 +865,38 @@
     }
 
     summary.classList.remove('visible');
-    alert('Thank you! We\'ll be in touch within 24 hours to confirm your consultation.');
+
+    // Disable button and show loading state
+    const btn = document.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Submitting…';
+
+    const formData = new FormData(document.getElementById('consultForm'));
+
+    fetch('https://formspree.io/f/xzdqvraa', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(res => {
+      if (res.ok) {
+        // Hide form, show success banner
+        document.getElementById('consultForm').style.display = 'none';
+        document.getElementById('successBanner').classList.add('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Submit &amp; Book My Consultation';
+        summary.textContent = 'Something went wrong. Please try again or contact us directly.';
+        summary.classList.add('visible');
+      }
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Submit &amp; Book My Consultation';
+      summary.textContent = 'Network error. Please check your connection and try again.';
+      summary.classList.add('visible');
+    });
   });
 
   document.getElementById('timeslotGroup').addEventListener('change', () => {
