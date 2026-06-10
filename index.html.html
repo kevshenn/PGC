@@ -1772,26 +1772,80 @@
                   radial-gradient(ellipse at 20% 80%, rgba(212,22,60,0.04) 0%, transparent 50%);
       pointer-events: none;
     }
+    .faq-section::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--accent) 40%, rgba(200,169,110,0.4) 60%, transparent 100%);
+      pointer-events: none;
+    }
+    /* Watermark character */
+    .faq-bg-char {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 340px;
+      font-weight: 900;
+      color: rgba(200,169,110,0.04);
+      user-select: none;
+      pointer-events: none;
+      z-index: 1;
+      line-height: 1;
+    }
+    /* Art Deco divider */
+    .faq-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 1100px;
+      margin: 24px 0 28px;
+    }
+    .faq-divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(200,169,110,0.5), transparent);
+    }
+    .faq-divider-line.right {
+      background: linear-gradient(270deg, rgba(200,169,110,0.5), transparent);
+    }
+    .faq-divider-ornament {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      font-size: 7px;
+      opacity: 0.7;
+      letter-spacing: 4px;
+    }
+    .faq-divider-ornament::before,
+    .faq-divider-ornament::after { content: '◆'; }
     .faq-section .section-eyebrow { color: var(--accent); }
     .faq-section .section-title { color: var(--white); }
     .faq-section .section-subtitle { color: rgba(255,255,255,0.6); }
     .faq-grid {
       max-width: 1100px;
-      margin: 52px 0 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      counter-reset: faq-counter;
     }
     .faq-item {
       border: 1px solid rgba(200,169,110,0.5);
+      border-left: 3px solid rgba(200,169,110,0.3);
       border-radius: 12px;
       background: #fdfbf7;
       overflow: hidden;
       transition: border-color 0.2s, box-shadow 0.2s;
+      counter-increment: faq-counter;
     }
     .faq-item.open {
       border-color: var(--accent);
-      box-shadow: 0 4px 24px rgba(200,169,110,0.15);
+      border-left-color: var(--accent);
+      box-shadow: 0 4px 28px rgba(200,169,110,0.18);
     }
     .faq-question {
       width: 100%;
@@ -1810,7 +1864,19 @@
       color: var(--primary);
       transition: color 0.2s;
     }
+    .faq-question::before {
+      content: counter(faq-counter, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: rgba(200,169,110,0.45);
+      min-width: 28px;
+      flex-shrink: 0;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.2s;
+    }
     .faq-item.open .faq-question { color: var(--accent); }
+    .faq-item.open .faq-question::before { color: var(--accent); }
     .faq-chevron {
       flex-shrink: 0;
       width: 22px; height: 22px;
@@ -1829,11 +1895,11 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.35s ease, padding 0.35s ease;
-      padding: 0 28px;
+      padding: 0 28px 0 80px;
     }
     .faq-item.open .faq-answer {
       max-height: 400px;
-      padding: 0 28px 22px;
+      padding: 0 28px 22px 80px;
     }
     .faq-answer p {
       font-size: 14px;
@@ -3131,10 +3197,16 @@
 
 <!-- FAQ -->
 <section class="faq-section" id="faq">
+  <div class="faq-bg-char">问</div>
   <div class="section-inner">
     <div class="section-eyebrow">Got Questions?</div>
     <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
     <p class="section-subtitle">Everything you need to know before booking your free consultation.</p>
+    <div class="faq-divider">
+      <span class="faq-divider-line"></span>
+      <span class="faq-divider-ornament">◆</span>
+      <span class="faq-divider-line right"></span>
+    </div>
 
     <div class="faq-grid">
 
