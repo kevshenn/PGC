@@ -1823,6 +1823,48 @@
       box-shadow: 0 10px 36px rgba(212, 22, 60, 0.5);
     }
 
+    /* CTA-specific button enhancements */
+    .cta-buttons .btn-red {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #b8001a, var(--red) 50%, #ff2d5a);
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      padding: 22px 48px;
+      animation: cta-glow-pulse 2.8s ease-in-out infinite;
+    }
+    .cta-buttons .btn-red::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -120%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      animation: cta-shimmer 2.8s ease-in-out infinite;
+    }
+    .cta-buttons .btn-red:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(212,22,60,0.55);
+      animation: none;
+    }
+    .cta-buttons .btn-red:hover::after { animation: none; }
+    .btn-cta-arrow {
+      display: inline-block;
+      margin-left: 8px;
+      transition: transform 0.22s;
+    }
+    .cta-buttons .btn-red:hover .btn-cta-arrow {
+      transform: translateX(5px);
+    }
+    @keyframes cta-shimmer {
+      0%   { left: -120%; }
+      45%  { left: 140%; }
+      100% { left: 140%; }
+    }
+    @keyframes cta-glow-pulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(212,22,60,0.42); }
+      50%       { box-shadow: 0 8px 40px rgba(212,22,60,0.62), 0 0 0 6px rgba(212,22,60,0.08); }
+    }
+
     .btn-outline {
       border: 2px solid rgba(200, 169, 110, 0.5);
       color: var(--accent);
@@ -3331,7 +3373,7 @@
       </div>
     </div>
     <div class="cta-buttons">
-      <a href="consultation.html" class="btn-large btn-red">Book Free Consultation</a>
+      <a href="consultation.html" class="btn-large btn-red">Book Free Consultation <span class="btn-cta-arrow">→</span></a>
       <a href="contact.html" class="btn-large btn-outline">Contact Us</a>
     </div>
     <p style="margin-top:32px;font-size:13px;color:rgba(10,15,46,0.35);letter-spacing:0.5px;">
