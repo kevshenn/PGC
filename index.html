@@ -1664,18 +1664,36 @@
     /* ── CTA SECTION ── */
     .cta-section {
       background: #faf7f0;
-      padding: 100px 48px;
+      padding: 110px 48px 90px;
       text-align: center;
       position: relative;
       overflow: hidden;
       border-top: 1px solid rgba(200,169,110,0.2);
     }
 
+    /* Sunrise launch glow rising from bottom */
     .cta-section::before {
       content: '';
       position: absolute;
+      bottom: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 560px;
+      background: radial-gradient(ellipse at center bottom, rgba(200,169,110,0.22) 0%, rgba(200,169,110,0.08) 40%, transparent 68%);
+      pointer-events: none;
+    }
+
+    /* Subtle light rays spreading upward from the glow */
+    .cta-section::after {
+      content: '';
+      position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.1) 0%, transparent 70%);
+      background:
+        linear-gradient(170deg, transparent 60%, rgba(200,169,110,0.04) 100%),
+        linear-gradient(10deg, transparent 60%, rgba(200,169,110,0.04) 100%),
+        linear-gradient(190deg, transparent 60%, rgba(200,169,110,0.03) 100%),
+        linear-gradient(-10deg, transparent 60%, rgba(200,169,110,0.03) 100%);
       pointer-events: none;
     }
 
@@ -1686,8 +1704,29 @@
       margin: 0 auto;
     }
 
+    .cta-begin-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .cta-begin-label::before,
+    .cta-begin-label::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
     .cta-section h2 {
-      font-size: clamp(32px, 4vw, 52px);
+      font-size: clamp(32px, 4vw, 54px);
       font-weight: 900;
       color: var(--primary);
       line-height: 1.1;
@@ -1709,7 +1748,44 @@
       font-size: 17px;
       line-height: 1.7;
       color: var(--gray-600);
-      margin-bottom: 44px;
+      margin-bottom: 36px;
+    }
+
+    .cta-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 0 auto 40px;
+      max-width: 480px;
+      background: white;
+      border: 1px solid rgba(200,169,110,0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(200,169,110,0.1);
+    }
+    .cta-proof-item {
+      flex: 1;
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .cta-proof-item + .cta-proof-item {
+      border-left: 1px solid rgba(200,169,110,0.15);
+    }
+    .cta-proof-num {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    .cta-proof-num span { color: var(--accent); }
+    .cta-proof-label {
+      font-size: 10.5px;
+      color: var(--gray-400);
+      font-weight: 500;
+      line-height: 1.3;
     }
 
     .cta-buttons {
@@ -3236,9 +3312,24 @@
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-content">
+    <div class="cta-begin-label">Begin Your Journey</div>
     <h2>Ready to <span>land your offer?</span></h2>
     <div class="cn">准备好拿下你的 offer 了吗？</div>
     <p>Book a free 30-minute consultation. We'll assess your profile, identify your strongest target roles, and explain exactly how we'd approach your recruitment. No obligation, no pressure.</p>
+    <div class="cta-proof">
+      <div class="cta-proof-item">
+        <div class="cta-proof-num">85<span>%+</span></div>
+        <div class="cta-proof-label">Placement rate</div>
+      </div>
+      <div class="cta-proof-item">
+        <div class="cta-proof-num">30<span>+</span></div>
+        <div class="cta-proof-label">Top-tier firms</div>
+      </div>
+      <div class="cta-proof-item">
+        <div class="cta-proof-num"><span>Free</span></div>
+        <div class="cta-proof-label">First consultation</div>
+      </div>
+    </div>
     <div class="cta-buttons">
       <a href="consultation.html" class="btn-large btn-red">Book Free Consultation</a>
       <a href="contact.html" class="btn-large btn-outline">Contact Us</a>
